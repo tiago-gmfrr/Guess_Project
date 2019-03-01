@@ -13,7 +13,17 @@ namespace Guess
     public partial class frmGuess : Form
     {
         bool reponse = false;
-        
+
+        IDictionary<string, string> QuestionsPrincipales = new Dictionary<string, string>()
+        {
+            {"Masculin", "Votre personnage est-il de sexe masculin ?"},
+            {"PlusDe35Ans", "Votre personnage a-t'il plus de 35 ans ?"},
+            {"CheveuxLongs", "Votre personnage a-t'il les cheveux longs ?"},
+            {"EnVie", "Votre personnage est-il encore en vie ?"},
+            {"NoirDePeau", "Votre personnage est-il noir de peau ?"},
+            {"Barbe", "Votre personnage a-t'il de la barbe ?"},
+        };
+
         //Chaque dictionnaire correspond à  un personnage et à ses critères
         IDictionary<string, bool> Kaaris = new Dictionary<string, bool>()
         {
@@ -112,6 +122,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", false},
+            {"Tanos", true}
         };
 
         public frmGuess()
