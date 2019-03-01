@@ -33,6 +33,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", true},
             {"Barbe", true},
+            //Question spécifique (unique pour chaque personnages)
             {"Bagarre", true}
         };
         IDictionary<string, bool> SnoopDogg = new Dictionary<string, bool>()
@@ -43,6 +44,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", true},
             {"Barbe", true},
+            //Question spécifique (unique pour chaque personnages)
             {"Fumeur", true}
         };        
         IDictionary<string, bool> ClaudeFrançois = new Dictionary<string, bool>()
@@ -53,6 +55,8 @@ namespace Guess
             {"EnVie", false},
             {"NoirDePeau", false},
             {"Barbe", false},
+            //Question spécifique (unique pour chaque personnages)
+            {"ChanteurFrancais", true}
         };
         IDictionary<string, bool> EmmaWatson = new Dictionary<string, bool>()
         {
@@ -62,6 +66,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", false},
+            //Question spécifique (unique pour chaque personnages)
             {"Magie", true}
         };        
         IDictionary<string, bool> PassePartout = new Dictionary<string, bool>()
@@ -72,6 +77,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", false},
+            //Question spécifique (unique pour chaque personnages)
             {"CompteLesCles", true}
         };
         IDictionary<string, bool> DenisBrogniart = new Dictionary<string, bool>()
@@ -82,6 +88,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", true},
+            //Question spécifique (unique pour chaque personnages)
             {"ConnaisMoundir", true}
         };
         IDictionary<string, bool> MaitreGims = new Dictionary<string, bool>()
@@ -92,6 +99,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", true},
             {"Barbe", true},
+            //Question spécifique (unique pour chaque personnages)
             {"SexionDassaut", true}
         };
         IDictionary<string, bool> EmiliaClark = new Dictionary<string, bool>()
@@ -102,6 +110,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", false},
+            //Question spécifique (unique pour chaque personnages)
             {"GameOfThrones", true}
         };
         IDictionary<string, bool> MadsMikkelsen = new Dictionary<string, bool>()
@@ -112,6 +121,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", true},
+            //Question spécifique (unique pour chaque personnages)
             {"Witcher", true}
         };
         IDictionary<string, bool> ScarlettJohansson = new Dictionary<string, bool>()
@@ -122,6 +132,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", false},
+            //Question spécifique (unique pour chaque personnages)
             {"Tanos", true}
         };
 
