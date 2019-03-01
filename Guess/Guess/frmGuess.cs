@@ -102,6 +102,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", true},
+            {"Witcher", true}
         };
         IDictionary<string, bool> ScarlettJohansson = new Dictionary<string, bool>()
         {
