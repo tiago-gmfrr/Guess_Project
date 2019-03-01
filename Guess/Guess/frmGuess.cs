@@ -14,6 +14,18 @@ namespace Guess
     {
         bool reponse = false;
 
+        //Point de chaque perrsonnage (sert a döfinir quand un perrsonnage ä "gaganer")
+        int PointKaaris = 0;
+        int PointSnoopDogg = 0;
+        int PointClaudeFrançois = 0;
+        int PointEmmaWatson = 0;
+        int PointPassePartout = 0;
+        int PointDenisBrogniart = 0;
+        int PointMaitreGims = 0;
+        int PointEmiliaClark = 0;
+        int PointMadsMikkelsen = 0;
+        int PointScarlettJohansson = 0;
+
         IDictionary<string, string> QuestionsPrincipales = new Dictionary<string, string>()
         {
             {"Masculin", "Votre personnage est-il de sexe masculin ?"},
@@ -137,7 +149,49 @@ namespace Guess
 
         private void btnOui_Click(object sender, EventArgs e)
         {
-            reponse = true;
+            string keyQuestion = string.Empty;
+
+            if (Kaaris[keyQuestion] == true)
+            {
+                PointKaaris++;
+            }
+            if (SnoopDogg[keyQuestion] == true)
+            {
+                PointSnoopDogg++;
+            }
+            if (ClaudeFrançois[keyQuestion] == true)
+            {
+                PointClaudeFrançois++;
+            }
+            if (EmmaWatson[keyQuestion] == true)
+            {
+                PointEmmaWatson++;
+            }
+            if (PassePartout[keyQuestion] == true)
+            {
+                PointPassePartout++;
+            }
+            if (DenisBrogniart[keyQuestion] == true)
+            {
+                PointDenisBrogniart++;
+            }
+            if (MaitreGims[keyQuestion] == true)
+            {
+                PointMaitreGims++;
+            }
+            if (EmiliaClark[keyQuestion] == true)
+            {
+                PointEmiliaClark++;
+            }
+            if (MadsMikkelsen[keyQuestion] == true)
+            {
+                PointMadsMikkelsen++;
+            }
+            if (ScarlettJohansson[keyQuestion] == true)
+            {
+                PointScarlettJohansson++;
+            }
+
         }
 
         private void btnNon_Click(object sender, EventArgs e)
