@@ -13,16 +13,99 @@ namespace Guess
     public partial class frmGuess : Form
     {
         bool reponse = false;
-        IDictionary<string, string> Kaaris = new Dictionary<string, string>();
-        IDictionary<string, string> SnoopDogg = new Dictionary<string, string>();        
-        IDictionary<string, string> ClaudeFrançois = new Dictionary<string, string>();
-        IDictionary<string, string> EmmaWatson = new Dictionary<string, string>();        
-        IDictionary<string, string> PassePartout = new Dictionary<string, string>();
-        IDictionary<string, string> DenisBrogniart = new Dictionary<string, string>();
-        IDictionary<string, string> MaitreGims = new Dictionary<string, string>();
-        IDictionary<string, string> EmiliaClark = new Dictionary<string, string>();
-        IDictionary<string, string> MadsMikkelsen = new Dictionary<string, string>();
-        IDictionary<string, string> ScarlettJohansson = new Dictionary<string, string>();
+
+        //Chaque dictionnaire correspond à  un personnage et à ses critères
+        IDictionary<string, bool> Kaaris = new Dictionary<string, bool>()
+        {
+            {"Masculin", true},
+            {"PlusDe35Ans", true},
+            {"CheveuxLongs", false},
+            {"EnVie", true},
+            {"NoirDePeau", true},
+            {"Barbe", true},  
+        };
+        IDictionary<string, bool> SnoopDogg = new Dictionary<string, bool>()
+        {
+            {"Masculin", true},
+            {"PlusDe35Ans", true},
+            {"CheveuxLongs", true},
+            {"EnVie", true},
+            {"NoirDePeau", true},
+            {"Barbe", true},
+        };        
+        IDictionary<string, bool> ClaudeFrançois = new Dictionary<string, bool>()
+        {
+            {"Masculin", true},
+            {"PlusDe35Ans", true},
+            {"CheveuxLongs", true},
+            {"EnVie", false},
+            {"NoirDePeau", false},
+            {"Barbe", false},
+        };
+        IDictionary<string, bool> EmmaWatson = new Dictionary<string, bool>()
+        {
+            {"Masculin", false},
+            {"PlusDe35Ans", false},
+            {"CheveuxLongs", true},
+            {"EnVie", true},
+            {"NoirDePeau", false},
+            {"Barbe", false},
+        };        
+        IDictionary<string, bool> PassePartout = new Dictionary<string, bool>()
+        {
+            {"Masculin", true},
+            {"PlusDe35Ans", true},
+            {"CheveuxLongs", false},
+            {"EnVie", true},
+            {"NoirDePeau", false},
+            {"Barbe", false},
+        };
+        IDictionary<string, bool> DenisBrogniart = new Dictionary<string, bool>()
+        {
+            {"Masculin", true},
+            {"PlusDe35Ans", true},
+            {"CheveuxLongs", false},
+            {"EnVie", true},
+            {"NoirDePeau", false},
+            {"Barbe", true},
+        };
+        IDictionary<string, bool> MaitreGims = new Dictionary<string, bool>()
+        {
+            {"Masculin", true},
+            {"PlusDe35Ans", false},
+            {"CheveuxLongs", false},
+            {"EnVie", true},
+            {"NoirDePeau", true},
+            {"Barbe", true},
+        };
+        IDictionary<string, bool> EmiliaClark = new Dictionary<string, bool>()
+        {
+            {"Masculin", false},
+            {"PlusDe35Ans", false},
+            {"CheveuxLongs", true},
+            {"EnVie", true},
+            {"NoirDePeau", false},
+            {"Barbe", false},
+        };
+        IDictionary<string, bool> MadsMikkelsen = new Dictionary<string, bool>()
+        {
+            {"Masculin", true},
+            {"PlusDe35Ans", true},
+            {"CheveuxLongs", false},
+            {"EnVie", true},
+            {"NoirDePeau", false},
+            {"Barbe", true},
+        };
+        IDictionary<string, bool> ScarlettJohansson = new Dictionary<string, bool>()
+        {
+            {"Masculin", false},
+            {"PlusDe35Ans", false},
+            {"CheveuxLongs", true},
+            {"EnVie", true},
+            {"NoirDePeau", false},
+            {"Barbe", false},
+        };
+
         public frmGuess()
         {
             InitializeComponent();
@@ -55,7 +138,7 @@ namespace Guess
 
             foreach (string line in lignes)
             {
-                string[] tmp = line.Split('//');
+                string[] tmp = line.Split('/');
                 string nom = tmp[0];
 
                 foreach (string caracteristique in tmp)
