@@ -14,6 +14,18 @@ namespace Guess
     {
         bool reponse = false;
 
+        //Point de chaque perrsonnage (sert a döfinir quand un perrsonnage ä "gaganer")
+        int PointKaaris = 0;
+        int PointSnoopDogg = 0;
+        int PointClaudeFrançois = 0;
+        int PointEmmaWatson = 0;
+        int PointPassePartout = 0;
+        int PointDenisBrogniart = 0;
+        int PointMaitreGims = 0;
+        int PointEmiliaClark = 0;
+        int PointMadsMikkelsen = 0;
+        int PointScarlettJohansson = 0;
+
         IDictionary<string, string> QuestionsPrincipales = new Dictionary<string, string>()
         {
             {"Masculin", "Votre personnage est-il de sexe masculin ?"},
@@ -33,6 +45,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", true},
             {"Barbe", true},
+            //Question spécifique (unique pour chaque personnages)
             {"Bagarre", true}
         };
         IDictionary<string, bool> SnoopDogg = new Dictionary<string, bool>()
@@ -43,6 +56,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", true},
             {"Barbe", true},
+            //Question spécifique (unique pour chaque personnages)
             {"Fumeur", true}
         };        
         IDictionary<string, bool> ClaudeFrançois = new Dictionary<string, bool>()
@@ -53,6 +67,8 @@ namespace Guess
             {"EnVie", false},
             {"NoirDePeau", false},
             {"Barbe", false},
+            //Question spécifique (unique pour chaque personnages)
+            {"ChanteurFrancais", true}
         };
         IDictionary<string, bool> EmmaWatson = new Dictionary<string, bool>()
         {
@@ -62,6 +78,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", false},
+            //Question spécifique (unique pour chaque personnages)
             {"Magie", true}
         };        
         IDictionary<string, bool> PassePartout = new Dictionary<string, bool>()
@@ -72,6 +89,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", false},
+            //Question spécifique (unique pour chaque personnages)
             {"CompteLesCles", true}
         };
         IDictionary<string, bool> DenisBrogniart = new Dictionary<string, bool>()
@@ -82,6 +100,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", true},
+            //Question spécifique (unique pour chaque personnages)
             {"ConnaisMoundir", true}
         };
         IDictionary<string, bool> MaitreGims = new Dictionary<string, bool>()
@@ -92,6 +111,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", true},
             {"Barbe", true},
+            //Question spécifique (unique pour chaque personnages)
             {"SexionDassaut", true}
         };
         IDictionary<string, bool> EmiliaClark = new Dictionary<string, bool>()
@@ -102,6 +122,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", false},
+            //Question spécifique (unique pour chaque personnages)
             {"GameOfThrones", true}
         };
         IDictionary<string, bool> MadsMikkelsen = new Dictionary<string, bool>()
@@ -112,6 +133,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", true},
+            //Question spécifique (unique pour chaque personnages)
             {"Witcher", true}
         };
         IDictionary<string, bool> ScarlettJohansson = new Dictionary<string, bool>()
@@ -122,6 +144,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", false},
+            //Question spécifique (unique pour chaque personnages)
             {"Tanos", true}
         };
 
@@ -140,7 +163,49 @@ namespace Guess
 
         private void btnOui_Click(object sender, EventArgs e)
         {
-            reponse = true;
+            string keyQuestion = string.Empty;
+
+            if (Kaaris[keyQuestion] == true)
+            {
+                PointKaaris++;
+            }
+            if (SnoopDogg[keyQuestion] == true)
+            {
+                PointSnoopDogg++;
+            }
+            if (ClaudeFrançois[keyQuestion] == true)
+            {
+                PointClaudeFrançois++;
+            }
+            if (EmmaWatson[keyQuestion] == true)
+            {
+                PointEmmaWatson++;
+            }
+            if (PassePartout[keyQuestion] == true)
+            {
+                PointPassePartout++;
+            }
+            if (DenisBrogniart[keyQuestion] == true)
+            {
+                PointDenisBrogniart++;
+            }
+            if (MaitreGims[keyQuestion] == true)
+            {
+                PointMaitreGims++;
+            }
+            if (EmiliaClark[keyQuestion] == true)
+            {
+                PointEmiliaClark++;
+            }
+            if (MadsMikkelsen[keyQuestion] == true)
+            {
+                PointMadsMikkelsen++;
+            }
+            if (ScarlettJohansson[keyQuestion] == true)
+            {
+                PointScarlettJohansson++;
+            }
+
         }
 
         private void btnNon_Click(object sender, EventArgs e)
