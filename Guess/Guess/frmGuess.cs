@@ -13,7 +13,7 @@ namespace Guess
     public partial class frmGuess : Form
     {
         bool reponse = false;
-
+        
         //Chaque dictionnaire correspond à  un personnage et à ses critères
         IDictionary<string, bool> Kaaris = new Dictionary<string, bool>()
         {
@@ -22,7 +22,8 @@ namespace Guess
             {"CheveuxLongs", false},
             {"EnVie", true},
             {"NoirDePeau", true},
-            {"Barbe", true},  
+            {"Barbe", true},
+            {"Bagarre", true}
         };
         IDictionary<string, bool> SnoopDogg = new Dictionary<string, bool>()
         {
@@ -32,6 +33,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", true},
             {"Barbe", true},
+            {"Fumeur", true}
         };        
         IDictionary<string, bool> ClaudeFrançois = new Dictionary<string, bool>()
         {
@@ -50,6 +52,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", false},
+            {"Magie", true}
         };        
         IDictionary<string, bool> PassePartout = new Dictionary<string, bool>()
         {
@@ -59,6 +62,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", false},
+            {"CompteLesCles", true}
         };
         IDictionary<string, bool> DenisBrogniart = new Dictionary<string, bool>()
         {
@@ -68,6 +72,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", true},
+            {"ConnaisMoundir", true}
         };
         IDictionary<string, bool> MaitreGims = new Dictionary<string, bool>()
         {
@@ -77,6 +82,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", true},
             {"Barbe", true},
+            {"SexionDassaut", true}
         };
         IDictionary<string, bool> EmiliaClark = new Dictionary<string, bool>()
         {
@@ -86,6 +92,7 @@ namespace Guess
             {"EnVie", true},
             {"NoirDePeau", false},
             {"Barbe", false},
+            {"GameOfThrones", true}
         };
         IDictionary<string, bool> MadsMikkelsen = new Dictionary<string, bool>()
         {
@@ -130,30 +137,35 @@ namespace Guess
 
         private void NewGame()
         {
-            string[] lignes;
-            var resources = Properties.Resources.Personnages__Criteres;
 
-            lignes = resources.Split(new[] { Environment.NewLine },
-    StringSplitOptions.None);
+            Random question = new Random();
 
-            foreach (string line in lignes)
-            {
-                string[] tmp = line.Split('/');
-                string nom = tmp[0];
 
-                foreach (string caracteristique in tmp)
-                {
 
-                    switch (nom)
-                    {
-                        case "Kaaris":
 
-                           // Kararis.Add(swdshak,caracteristique);
-                            break;
-                    }
+            //string[] lignes;
+            //var resources = Properties.Resources.Personnages__Criteres;
+
+            //lignes = resources.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+
+            //foreach (string line in lignes)
+            //{
+            //    string[] tmp = line.Split('/');
+            //    string nom = tmp[0];
+
+            //    foreach (string caracteristique in tmp)
+            //    {
+
+            //        switch (nom)
+            //        {
+            //            case "Kaaris":
+
+            //               // Kararis.Add(swdshak,caracteristique);
+            //                break;
+            //        }
                 
-            }
-            }
+            //}
+            //}
         }
     }
 }
