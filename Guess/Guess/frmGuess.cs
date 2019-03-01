@@ -125,10 +125,13 @@ namespace Guess
             {"Tanos", true}
         };
 
+
+
         public frmGuess()
         {
             InitializeComponent();
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -147,10 +150,20 @@ namespace Guess
             
         }
 
-        private void NewGame()
+        private string NewGame()
         {
+            //RANDOM QUESTIONS
 
+            //Variable random
             Random question = new Random();
+            //Création d'une liste des clés du dictionnaire des questions car dictionnaire ne contient pas d'index
+            List<string> questionList = new List<string>(QuestionsPrincipales.Keys);
+            //La question    = index x de questionList;
+            string randomKey = questionList[question.Next(questionList.Count)];
+            //Retourne la question choisi aux hasards
+            return QuestionsPrincipales[randomKey];
+
+
 
 
 
@@ -175,7 +188,7 @@ namespace Guess
             //               // Kararis.Add(swdshak,caracteristique);
             //                break;
             //        }
-                
+
             //}
             //}
         }
