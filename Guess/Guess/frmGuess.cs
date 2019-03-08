@@ -18,7 +18,7 @@ namespace Guess
         public Random question = new Random();
         //Création d'une liste des clés du dictionnaire des questions car dictionnaire ne contient pas d'index
         public List<string> questionList = new List<string>();
-        
+
         public string randomKey;
 
 
@@ -67,7 +67,7 @@ namespace Guess
             {"Barbe", true},
             //Question spécifique (unique pour chaque personnages)
             {"Fumeur", true}
-        };        
+        };
         IDictionary<string, bool> ClaudeFrançois = new Dictionary<string, bool>()
         {
             {"Masculin", true},
@@ -89,7 +89,7 @@ namespace Guess
             {"Barbe", false},
             //Question spécifique (unique pour chaque personnages)
             {"Magie", true}
-        };        
+        };
         IDictionary<string, bool> PassePartout = new Dictionary<string, bool>()
         {
             {"Masculin", true},
@@ -172,7 +172,7 @@ namespace Guess
 
         private void btnOui_Click(object sender, EventArgs e)
         {
-            
+
             if (Kaaris[randomKey] == true)
             {
                 PointKaaris++;
@@ -282,14 +282,6 @@ namespace Guess
             PointScarlettJohansson = 0;
         }
 
-<<<<<<< HEAD
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblQuestion_Click(object sender, EventArgs e)
-=======
         public void NextQuestion()
         {
             //Traitement + affichage de la question
@@ -301,10 +293,10 @@ namespace Guess
         }
 
         public void KiCéKiGanieuh()
->>>>>>> 9e00a678899c44b0eb6313b85ce22b0d20fb7eb2
+
         {
             List<int> PointsPersonnages = new List<int>();
-            PointsPersonnages.Add(PointKaaris);
+        PointsPersonnages.Add(PointKaaris);
             PointsPersonnages.Add(PointSnoopDogg);
             PointsPersonnages.Add(PointClaudeFrançois);
             PointsPersonnages.Add(PointEmmaWatson);
@@ -315,7 +307,7 @@ namespace Guess
             PointsPersonnages.Add(PointMadsMikkelsen);
             PointsPersonnages.Add(PointScarlettJohansson);
 
-
+            
 
         }
     }

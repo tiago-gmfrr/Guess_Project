@@ -31,10 +31,10 @@
             this.lblQuestion = new System.Windows.Forms.Label();
             this.btnNon = new System.Windows.Forms.Button();
             this.btnOui = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbxGuess = new System.Windows.Forms.PictureBox();
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnLancerPartie = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxGuess)).BeginInit();
             this.SuspendLayout();
             // 
             // lblQuestion
@@ -46,7 +46,6 @@
             this.lblQuestion.TabIndex = 0;
             this.lblQuestion.Text = "aaaaaa";
             this.lblQuestion.Visible = false;
-            this.lblQuestion.Click += new System.EventHandler(this.lblQuestion_Click);
             // 
             // btnNon
             // 
@@ -70,15 +69,14 @@
             this.btnOui.Visible = false;
             this.btnOui.Click += new System.EventHandler(this.btnOui_Click);
             // 
-            // pictureBox1
+            // pbxGuess
             // 
-            this.pictureBox1.Image = global::Guess.Properties.Resources.GuessTitleIMG;
-            this.pictureBox1.Location = new System.Drawing.Point(98, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(241, 118);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbxGuess.Image = global::Guess.Properties.Resources.GuessTitleIMG;
+            this.pbxGuess.Location = new System.Drawing.Point(98, 31);
+            this.pbxGuess.Name = "pbxGuess";
+            this.pbxGuess.Size = new System.Drawing.Size(241, 118);
+            this.pbxGuess.TabIndex = 3;
+            this.pbxGuess.TabStop = false;
             // 
             // btnQuitter
             // 
@@ -105,14 +103,14 @@
             this.ClientSize = new System.Drawing.Size(445, 395);
             this.Controls.Add(this.btnLancerPartie);
             this.Controls.Add(this.btnQuitter);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbxGuess);
             this.Controls.Add(this.btnOui);
             this.Controls.Add(this.btnNon);
             this.Controls.Add(this.lblQuestion);
             this.Name = "frmGuess";
             this.Text = "Guess";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxGuess)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,7 +121,7 @@
         private System.Windows.Forms.Label lblQuestion;
         private System.Windows.Forms.Button btnNon;
         private System.Windows.Forms.Button btnOui;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxGuess;
         private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.Button btnLancerPartie;
     }
