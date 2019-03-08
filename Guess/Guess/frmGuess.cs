@@ -270,29 +270,16 @@ namespace Guess
         {
             questionList = new List<string>(QuestionsPrincipales.Keys);
 
-            //string[] lignes;
-            //var resources = Properties.Resources.Personnages__Criteres;
-
-            //lignes = resources.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
-
-            //foreach (string line in lignes)
-            //{
-            //    string[] tmp = line.Split('/');
-            //    string nom = tmp[0];
-
-            //    foreach (string caracteristique in tmp)
-            //    {
-
-            //        switch (nom)
-            //        {
-            //            case "Kaaris":
-
-            //               // Kararis.Add(swdshak,caracteristique);
-            //                break;
-            //        }
-
-            //}
-            //}
+            PointKaaris = 0;
+            PointSnoopDogg = 0;
+            PointClaudeFrançois = 0;
+            PointEmmaWatson = 0;
+            PointPassePartout = 0;
+            PointDenisBrogniart = 0;
+            PointMaitreGims = 0;
+            PointEmiliaClark = 0;
+            PointMadsMikkelsen = 0;
+            PointScarlettJohansson = 0;
         }
 
         public void NextQuestion()
@@ -307,6 +294,19 @@ namespace Guess
 
         public void KiCéKiGanieuh()
         {
+            List<int> PointsPersonnages = new List<int>();
+            PointsPersonnages.Add(PointKaaris);
+            PointsPersonnages.Add(PointSnoopDogg);
+            PointsPersonnages.Add(PointClaudeFrançois);
+            PointsPersonnages.Add(PointEmmaWatson);
+            PointsPersonnages.Add(PointPassePartout);
+            PointsPersonnages.Add(PointDenisBrogniart);
+            PointsPersonnages.Add(PointMaitreGims);
+            PointsPersonnages.Add(PointEmiliaClark);
+            PointsPersonnages.Add(PointMadsMikkelsen);
+            PointsPersonnages.Add(PointScarlettJohansson);
+
+
 
         }
     }
