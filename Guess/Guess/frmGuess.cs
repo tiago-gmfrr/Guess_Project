@@ -12,8 +12,16 @@ namespace Guess
 {
     public partial class frmGuess : Form
     {
-        bool reponse = false;
+        //RANDOM QUESTIONS
+
+        //Variable random
+        public Random question = new Random();
+        //Création d'une liste des clés du dictionnaire des questions car dictionnaire ne contient pas d'index
+        public List<string> questionList = new List<string>();
+        
         public string randomKey;
+
+
         //Point de chaque perrsonnage (sert a döfinir quand un perrsonnage ä "gaganer")
         int PointKaaris = 0;
         int PointSnoopDogg = 0;
@@ -206,7 +214,7 @@ namespace Guess
                 PointScarlettJohansson++;
             }
             lblQuestion.Text += PointClaudeFrançois;
-            NewGame();
+            NextQuestion();
 
         }
 
@@ -260,23 +268,7 @@ namespace Guess
 
         public void NewGame()
         {
-            //RANDOM QUESTIONS
-
-            //Variable random
-            Random question = new Random();
-            //Création d'une liste des clés du dictionnaire des questions car dictionnaire ne contient pas d'index
-            List<string> questionList = new List<string>(QuestionsPrincipales.Keys);
-
-            //Traitement + affichage de la question
-            //La question    = index x de questionList;
-            randomKey = questionList[question.Next(questionList.Count)];
-            //print dans le label la question
-            lblQuestion.Text = QuestionsPrincipales[randomKey];
-
-
-
-
-
+            questionList = new List<string>(QuestionsPrincipales.Keys);
 
             //string[] lignes;
             //var resources = Properties.Resources.Personnages__Criteres;
@@ -301,6 +293,21 @@ namespace Guess
 
             //}
             //}
+        }
+
+        public void NextQuestion()
+        {
+            //Traitement + affichage de la question
+            //La question    = index x de questionList;
+            randomKey = questionList[question.Next(questionList.Count)];
+            //print dans le label la question
+            lblQuestion.Text = QuestionsPrincipales[randomKey];
+
+        }
+
+        public void KiCéKiGanieuh()
+        {
+
         }
     }
 }
