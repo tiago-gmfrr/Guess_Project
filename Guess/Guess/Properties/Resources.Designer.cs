@@ -61,6 +61,16 @@ namespace Guess.Properties {
         }
         
         /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GuessTitleIMG {
+            get {
+                object obj = ResourceManager.GetObject("GuessTitleIMG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à  Nom // Male // Cheveux Court // Asiatique // Sportif // Barbe // Moutache // PlusQue35 // Noir // Acteur // 
         /// Nom:Snoop//Male:Oui//CheveuxCourt:Non//Asiatique:Non//Sportif:Non//Barbe:Non//Moustache:Oui//PlusQue35:Oui//Noir:True//Acteur:Non
         ///.

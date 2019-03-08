@@ -83,5 +83,8 @@
   <ItemGroup>
     <None Include="Resources\Personnages--Criteres.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GuessTitleIMG.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

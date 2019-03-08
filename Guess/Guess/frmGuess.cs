@@ -18,8 +18,11 @@ namespace Guess
         public Random question = new Random();
         //Création d'une liste des clés du dictionnaire des questions car dictionnaire ne contient pas d'index
         public List<string> questionList = new List<string>();
+
         //random pour les questions et les réponses, needed en global plutôt que local dans les méthodes
         public string questionActuelle;
+        public string randomKey;
+
 
 
         //Point de chaque perrsonnage (sert a döfinir quand un perrsonnage ä "gaganer")
@@ -67,7 +70,7 @@ namespace Guess
             {"Barbe", true},
             //Question spécifique (unique pour chaque personnages)
             {"Fumeur", true}
-        };        
+        };
         IDictionary<string, bool> ClaudeFrançois = new Dictionary<string, bool>()
         {
             {"Masculin", true},
@@ -89,7 +92,7 @@ namespace Guess
             {"Barbe", false},
             //Question spécifique (unique pour chaque personnages)
             {"Magie", true}
-        };        
+        };
         IDictionary<string, bool> PassePartout = new Dictionary<string, bool>()
         {
             {"Masculin", true},
@@ -269,12 +272,22 @@ namespace Guess
         public void NewGame()
         {
             questionList = new List<string>(QuestionsPrincipales.Keys);
+
+            PointKaaris = 0;
+            PointSnoopDogg = 0;
+            PointClaudeFrançois = 0;
+            PointEmmaWatson = 0;
+            PointPassePartout = 0;
+            PointDenisBrogniart = 0;
+            PointMaitreGims = 0;
+            PointEmiliaClark = 0;
+            PointMadsMikkelsen = 0;
+            PointScarlettJohansson = 0;
         }
         //Traitement de la liste des questions + Affichage de la question
         public void NextQuestion()
         {
             //La question    = index [random] de questionList
-         
             questionActuelle = questionList[question.Next(questionList.Count)]; //Par défaut le random va de 0 à count
             //print dans le label la question
             lblQuestion.Text = QuestionsPrincipales[questionActuelle];
@@ -283,7 +296,21 @@ namespace Guess
         }
 
         public void KiCéKiGanieuh()
+
         {
+            List<int> PointsPersonnages = new List<int>();
+        PointsPersonnages.Add(PointKaaris);
+            PointsPersonnages.Add(PointSnoopDogg);
+            PointsPersonnages.Add(PointClaudeFrançois);
+            PointsPersonnages.Add(PointEmmaWatson);
+            PointsPersonnages.Add(PointPassePartout);
+            PointsPersonnages.Add(PointDenisBrogniart);
+            PointsPersonnages.Add(PointMaitreGims);
+            PointsPersonnages.Add(PointEmiliaClark);
+            PointsPersonnages.Add(PointMadsMikkelsen);
+            PointsPersonnages.Add(PointScarlettJohansson);
+
+            
 
         }
     }
