@@ -18,8 +18,8 @@ namespace Guess
         public Random question = new Random();
         //Création d'une liste des clés du dictionnaire des questions car dictionnaire ne contient pas d'index
         public List<string> questionList = new List<string>();
-        
-        public string randomKey;
+        //random pour les questions et les réponses, needed en global plutôt que local dans les méthodes
+        public string questionActuelle;
 
 
         //Point de chaque perrsonnage (sert a döfinir quand un perrsonnage ä "gaganer")
@@ -173,43 +173,43 @@ namespace Guess
         private void btnOui_Click(object sender, EventArgs e)
         {
             
-            if (Kaaris[randomKey] == true)
+            if (Kaaris[questionActuelle] == true)
             {
                 PointKaaris++;
             }
-            if (SnoopDogg[randomKey] == true)
+            if (SnoopDogg[questionActuelle] == true)
             {
                 PointSnoopDogg++;
             }
-            if (ClaudeFrançois[randomKey] == true)
+            if (ClaudeFrançois[questionActuelle] == true)
             {
                 PointClaudeFrançois++;
             }
-            if (EmmaWatson[randomKey] == true)
+            if (EmmaWatson[questionActuelle] == true)
             {
                 PointEmmaWatson++;
             }
-            if (PassePartout[randomKey] == true)
+            if (PassePartout[questionActuelle] == true)
             {
                 PointPassePartout++;
             }
-            if (DenisBrogniart[randomKey] == true)
+            if (DenisBrogniart[questionActuelle] == true)
             {
                 PointDenisBrogniart++;
             }
-            if (MaitreGims[randomKey] == true)
+            if (MaitreGims[questionActuelle] == true)
             {
                 PointMaitreGims++;
             }
-            if (EmiliaClark[randomKey] == true)
+            if (EmiliaClark[questionActuelle] == true)
             {
                 PointEmiliaClark++;
             }
-            if (MadsMikkelsen[randomKey] == true)
+            if (MadsMikkelsen[questionActuelle] == true)
             {
                 PointMadsMikkelsen++;
             }
-            if (ScarlettJohansson[randomKey] == true)
+            if (ScarlettJohansson[questionActuelle] == true)
             {
                 PointScarlettJohansson++;
             }
@@ -220,43 +220,43 @@ namespace Guess
 
         private void btnNon_Click(object sender, EventArgs e)
         {
-            if (Kaaris[randomKey] == false)
+            if (Kaaris[questionActuelle] == false)
             {
                 PointKaaris++;
             }
-            if (SnoopDogg[randomKey] == false)
+            if (SnoopDogg[questionActuelle] == false)
             {
                 PointSnoopDogg++;
             }
-            if (ClaudeFrançois[randomKey] == false)
+            if (ClaudeFrançois[questionActuelle] == false)
             {
                 PointClaudeFrançois++;
             }
-            if (EmmaWatson[randomKey] == false)
+            if (EmmaWatson[questionActuelle] == false)
             {
                 PointEmmaWatson++;
             }
-            if (PassePartout[randomKey] == false)
+            if (PassePartout[questionActuelle] == false)
             {
                 PointPassePartout++;
             }
-            if (DenisBrogniart[randomKey] == false)
+            if (DenisBrogniart[questionActuelle] == false)
             {
                 PointDenisBrogniart++;
             }
-            if (MaitreGims[randomKey] == false)
+            if (MaitreGims[questionActuelle] == false)
             {
                 PointMaitreGims++;
             }
-            if (EmiliaClark[randomKey] == false)
+            if (EmiliaClark[questionActuelle] == false)
             {
                 PointEmiliaClark++;
             }
-            if (MadsMikkelsen[randomKey] == false)
+            if (MadsMikkelsen[questionActuelle] == false)
             {
                 PointMadsMikkelsen++;
             }
-            if (ScarlettJohansson[randomKey] == false)
+            if (ScarlettJohansson[questionActuelle] == false)
             {
                 PointScarlettJohansson++;
             }
@@ -265,43 +265,20 @@ namespace Guess
 
         }
 
-
+        //Creation d'une nouvelle liste de question
         public void NewGame()
         {
             questionList = new List<string>(QuestionsPrincipales.Keys);
-
-            //string[] lignes;
-            //var resources = Properties.Resources.Personnages__Criteres;
-
-            //lignes = resources.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
-
-            //foreach (string line in lignes)
-            //{
-            //    string[] tmp = line.Split('/');
-            //    string nom = tmp[0];
-
-            //    foreach (string caracteristique in tmp)
-            //    {
-
-            //        switch (nom)
-            //        {
-            //            case "Kaaris":
-
-            //               // Kararis.Add(swdshak,caracteristique);
-            //                break;
-            //        }
-
-            //}
-            //}
         }
-
+        //Traitement de la liste des questions + Affichage de la question
         public void NextQuestion()
         {
-            //Traitement + affichage de la question
-            //La question    = index x de questionList;
-            randomKey = questionList[question.Next(questionList.Count)];
+            //La question    = index [random] de questionList
+         
+            questionActuelle = questionList[question.Next(questionList.Count)]; //Par défaut le random va de 0 à count
             //print dans le label la question
-            lblQuestion.Text = QuestionsPrincipales[randomKey];
+            lblQuestion.Text = QuestionsPrincipales[questionActuelle];
+            questionList.Remove(questionActuelle);
 
         }
 
