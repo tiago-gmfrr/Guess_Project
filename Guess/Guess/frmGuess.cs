@@ -12,14 +12,19 @@ namespace Guess
 {
     public partial class frmGuess : Form
     {
+
+
         //RANDOM QUESTIONS
 
         //Variable random
         public Random question = new Random();
         //Création d'une liste des clés du dictionnaire des questions car dictionnaire ne contient pas d'index
         public List<string> questionList = new List<string>();
-        
+
+        //random pour les questions et les réponses, needed en global plutôt que local dans les méthodes
+        public string questionActuelle;
         public string randomKey;
+
 
 
         //Point de chaque perrsonnage (sert a döfinir quand un perrsonnage ä "gaganer")
@@ -33,6 +38,9 @@ namespace Guess
         int PointEmiliaClark = 12;
         int PointMadsMikkelsen = 0;
         int PointScarlettJohansson = 11;
+
+        
+        
 
 
         IDictionary<string, string> QuestionsPrincipales = new Dictionary<string, string>()
@@ -67,7 +75,7 @@ namespace Guess
             {"Barbe", true},
             //Question spécifique (unique pour chaque personnages)
             {"Fumeur", true}
-        };        
+        };
         IDictionary<string, bool> ClaudeFrançois = new Dictionary<string, bool>()
         {
             {"Masculin", true},
@@ -89,7 +97,7 @@ namespace Guess
             {"Barbe", false},
             //Question spécifique (unique pour chaque personnages)
             {"Magie", true}
-        };        
+        };
         IDictionary<string, bool> PassePartout = new Dictionary<string, bool>()
         {
             {"Masculin", true},
@@ -162,54 +170,62 @@ namespace Guess
         public frmGuess()
         {
             InitializeComponent();
+            //Position boutons
+            //Btn quitter (en bas a gauche)
+            btnQuitter.Top = 259;
+            btnQuitter.Left = 35;
+
+            //Btn lancer partie (en bas a droite)
+            btnLancerPartie.Top = 259;
+            btnLancerPartie.Left = 35;
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            NewGame();
+           
         }
 
         private void btnOui_Click(object sender, EventArgs e)
         {
             
-            if (Kaaris[randomKey] == true)
+            if (Kaaris[questionActuelle] == true)
             {
                 PointKaaris++;
             }
-            if (SnoopDogg[randomKey] == true)
+            if (SnoopDogg[questionActuelle] == true)
             {
                 PointSnoopDogg++;
             }
-            if (ClaudeFrançois[randomKey] == true)
+            if (ClaudeFrançois[questionActuelle] == true)
             {
                 PointClaudeFrançois++;
             }
-            if (EmmaWatson[randomKey] == true)
+            if (EmmaWatson[questionActuelle] == true)
             {
                 PointEmmaWatson++;
             }
-            if (PassePartout[randomKey] == true)
+            if (PassePartout[questionActuelle] == true)
             {
                 PointPassePartout++;
             }
-            if (DenisBrogniart[randomKey] == true)
+            if (DenisBrogniart[questionActuelle] == true)
             {
                 PointDenisBrogniart++;
             }
-            if (MaitreGims[randomKey] == true)
+            if (MaitreGims[questionActuelle] == true)
             {
                 PointMaitreGims++;
             }
-            if (EmiliaClark[randomKey] == true)
+            if (EmiliaClark[questionActuelle] == true)
             {
                 PointEmiliaClark++;
             }
-            if (MadsMikkelsen[randomKey] == true)
+            if (MadsMikkelsen[questionActuelle] == true)
             {
                 PointMadsMikkelsen++;
             }
-            if (ScarlettJohansson[randomKey] == true)
+            if (ScarlettJohansson[questionActuelle] == true)
             {
                 PointScarlettJohansson++;
             }
@@ -220,54 +236,69 @@ namespace Guess
 
         private void btnNon_Click(object sender, EventArgs e)
         {
-            if (Kaaris[randomKey] == false)
+            if (Kaaris[questionActuelle] == false)
             {
                 PointKaaris++;
             }
-            if (SnoopDogg[randomKey] == false)
+            if (SnoopDogg[questionActuelle] == false)
             {
                 PointSnoopDogg++;
             }
-            if (ClaudeFrançois[randomKey] == false)
+            if (ClaudeFrançois[questionActuelle] == false)
             {
                 PointClaudeFrançois++;
             }
-            if (EmmaWatson[randomKey] == false)
+            if (EmmaWatson[questionActuelle] == false)
             {
                 PointEmmaWatson++;
             }
-            if (PassePartout[randomKey] == false)
+            if (PassePartout[questionActuelle] == false)
             {
                 PointPassePartout++;
             }
-            if (DenisBrogniart[randomKey] == false)
+            if (DenisBrogniart[questionActuelle] == false)
             {
                 PointDenisBrogniart++;
             }
-            if (MaitreGims[randomKey] == false)
+            if (MaitreGims[questionActuelle] == false)
             {
                 PointMaitreGims++;
             }
-            if (EmiliaClark[randomKey] == false)
+            if (EmiliaClark[questionActuelle] == false)
             {
                 PointEmiliaClark++;
             }
-            if (MadsMikkelsen[randomKey] == false)
+            if (MadsMikkelsen[questionActuelle] == false)
             {
                 PointMadsMikkelsen++;
             }
-            if (ScarlettJohansson[randomKey] == false)
+            if (ScarlettJohansson[questionActuelle] == false)
             {
                 PointScarlettJohansson++;
             }
             lblQuestion.Text += PointClaudeFrançois;
-            NewGame();
+            
 
         }
 
-
+<<<<<<< HEAD
+        /// <summary>
+        /// Les boutons deviennet invisibles / visibles
+        /// Les pints de chaque personne sont mis a 0
+        /// La liste de question est initialisé
+        /// </summary>
+=======
+        //Creation d'une nouvelle liste de question
+>>>>>>> 69cb03e97a11997f97a13578c469de03fd66bbb3
         public void NewGame()
         {
+            btnLancerPartie.Visible = false;
+            btnQuitter.Visible = false;
+
+            btnOui.Visible = true;
+            btnNon.Visible = true;
+            lblQuestion.Visible = true;
+
             questionList = new List<string>(QuestionsPrincipales.Keys);
 
             PointKaaris = 0;
@@ -281,26 +312,35 @@ namespace Guess
             PointMadsMikkelsen = 0;
             PointScarlettJohansson = 0;
         }
+<<<<<<< HEAD
         
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
         
+=======
+        //Traitement de la liste des questions + Affichage de la question
+>>>>>>> acbd561eee749c67427f3f0c9a2ab200d328988b
         public void NextQuestion()
         {
-            //Traitement + affichage de la question
-            //La question    = index x de questionList;
-            randomKey = questionList[question.Next(questionList.Count)];
+            //La question    = index [random] de questionList
+            questionActuelle = questionList[question.Next(questionList.Count)]; //Par défaut le random va de 0 à count
             //print dans le label la question
-            lblQuestion.Text = QuestionsPrincipales[randomKey];
+            lblQuestion.Text = QuestionsPrincipales[questionActuelle];
+            questionList.Remove(questionActuelle);
 
         }
 
+<<<<<<< HEAD
         public int KiCéKiGanieuh()
+=======
+        public void KiCéKiGanieuh()
+
+>>>>>>> acbd561eee749c67427f3f0c9a2ab200d328988b
         {
             List<int> PointsPersonnages = new List<int>();
-            PointsPersonnages.Add(PointKaaris);
+        PointsPersonnages.Add(PointKaaris);
             PointsPersonnages.Add(PointSnoopDogg);
             PointsPersonnages.Add(PointClaudeFrançois);
             PointsPersonnages.Add(PointEmmaWatson);
@@ -311,9 +351,22 @@ namespace Guess
             PointsPersonnages.Add(PointMadsMikkelsen);
             PointsPersonnages.Add(PointScarlettJohansson);
 
+<<<<<<< HEAD
             int max = PointsPersonnages.Max();
 
             return max;
+=======
+            
+
+        }
+
+        private void btnLancerPartie_Click(object sender, EventArgs e)
+        {
+            // Lancer la partie
+            NewGame();
+            NextQuestion();
+        
+>>>>>>> acbd561eee749c67427f3f0c9a2ab200d328988b
         }
 
         public void 
