@@ -9,3 +9,4 @@ School Project
 - git push
 
 Faites ceci dans un ordre spécifique afin qu'il n'y ait pas de conflit.
+Renseignez-vous sur internet s'il y a des problèmes.
