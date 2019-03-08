@@ -30,9 +30,9 @@ namespace Guess
         int PointPassePartout = 0;
         int PointDenisBrogniart = 0;
         int PointMaitreGims = 0;
-        int PointEmiliaClark = 0;
+        int PointEmiliaClark = 12;
         int PointMadsMikkelsen = 0;
-        int PointScarlettJohansson = 0;
+        int PointScarlettJohansson = 11;
 
 
         IDictionary<string, string> QuestionsPrincipales = new Dictionary<string, string>()
@@ -281,15 +281,12 @@ namespace Guess
             PointMadsMikkelsen = 0;
             PointScarlettJohansson = 0;
         }
-
-<<<<<<< HEAD
+        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void lblQuestion_Click(object sender, EventArgs e)
-=======
+        
         public void NextQuestion()
         {
             //Traitement + affichage de la question
@@ -300,8 +297,7 @@ namespace Guess
 
         }
 
-        public void KiCéKiGanieuh()
->>>>>>> 9e00a678899c44b0eb6313b85ce22b0d20fb7eb2
+        public int KiCéKiGanieuh()
         {
             List<int> PointsPersonnages = new List<int>();
             PointsPersonnages.Add(PointKaaris);
@@ -315,8 +311,11 @@ namespace Guess
             PointsPersonnages.Add(PointMadsMikkelsen);
             PointsPersonnages.Add(PointScarlettJohansson);
 
+            int max = PointsPersonnages.Max();
 
-
+            return max;
         }
+
+        public void 
     }
 }
