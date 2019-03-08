@@ -49,7 +49,7 @@
             // 
             // btnNon
             // 
-            this.btnNon.Location = new System.Drawing.Point(253, 380);
+            this.btnNon.Location = new System.Drawing.Point(253, 299);
             this.btnNon.Name = "btnNon";
             this.btnNon.Size = new System.Drawing.Size(115, 60);
             this.btnNon.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             // btnOui
             // 
-            this.btnOui.Location = new System.Drawing.Point(132, 380);
+            this.btnOui.Location = new System.Drawing.Point(57, 299);
             this.btnOui.Name = "btnOui";
             this.btnOui.Size = new System.Drawing.Size(115, 60);
             this.btnOui.TabIndex = 2;
@@ -95,6 +95,7 @@
             this.btnLancerPartie.TabIndex = 5;
             this.btnLancerPartie.Text = "Lancer une partie";
             this.btnLancerPartie.UseVisualStyleBackColor = true;
+            this.btnLancerPartie.Click += new System.EventHandler(this.btnLancerPartie_Click);
             // 
             // frmGuess
             // 

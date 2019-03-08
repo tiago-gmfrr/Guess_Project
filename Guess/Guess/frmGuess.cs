@@ -12,6 +12,8 @@ namespace Guess
 {
     public partial class frmGuess : Form
     {
+
+
         //RANDOM QUESTIONS
 
         //Variable random
@@ -33,6 +35,9 @@ namespace Guess
         int PointEmiliaClark = 0;
         int PointMadsMikkelsen = 0;
         int PointScarlettJohansson = 0;
+
+        
+        
 
 
         IDictionary<string, string> QuestionsPrincipales = new Dictionary<string, string>()
@@ -162,12 +167,14 @@ namespace Guess
         public frmGuess()
         {
             InitializeComponent();
+            //Position boutons
+
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            NewGame();
+           
         }
 
         private void btnOui_Click(object sender, EventArgs e)
@@ -261,13 +268,24 @@ namespace Guess
                 PointScarlettJohansson++;
             }
             lblQuestion.Text += PointClaudeFrançois;
-            NewGame();
+            
 
         }
 
-
+        /// <summary>
+        /// Les boutons deviennet invisibles / visibles
+        /// Les pints de chaque personne sont mis a 0
+        /// La liste de question est initialisé
+        /// </summary>
         public void NewGame()
         {
+            btnLancerPartie.Visible = false;
+            btnQuitter.Visible = false;
+
+            btnOui.Visible = true;
+            btnNon.Visible = true;
+            lblQuestion.Visible = true;
+
             questionList = new List<string>(QuestionsPrincipales.Keys);
 
             PointKaaris = 0;
@@ -309,6 +327,14 @@ namespace Guess
 
             
 
+        }
+
+        private void btnLancerPartie_Click(object sender, EventArgs e)
+        {
+            // Lancer la partie
+            NewGame();
+            NextQuestion();
+        
         }
     }
 }
