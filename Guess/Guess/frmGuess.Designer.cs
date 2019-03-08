@@ -38,31 +38,30 @@
             this.lblQuestion.AutoSize = true;
             this.lblQuestion.Location = new System.Drawing.Point(318, 108);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(35, 13);
+            this.lblQuestion.Size = new System.Drawing.Size(0, 13);
             this.lblQuestion.TabIndex = 0;
-            this.lblQuestion.Text = "label1";
             // 
             // btnNon
             // 
-            this.btnNon.Location = new System.Drawing.Point(128, 310);
+            this.btnNon.Location = new System.Drawing.Point(516, 219);
             this.btnNon.Name = "btnNon";
             this.btnNon.Size = new System.Drawing.Size(115, 60);
             this.btnNon.TabIndex = 1;
-            this.btnNon.Text = "button1";
+            this.btnNon.Text = "non";
             this.btnNon.UseVisualStyleBackColor = true;
             this.btnNon.Click += new System.EventHandler(this.btnNon_Click);
             // 
             // btnOui
             // 
-            this.btnOui.Location = new System.Drawing.Point(455, 310);
+            this.btnOui.Location = new System.Drawing.Point(103, 219);
             this.btnOui.Name = "btnOui";
             this.btnOui.Size = new System.Drawing.Size(115, 60);
             this.btnOui.TabIndex = 2;
-            this.btnOui.Text = "button2";
+            this.btnOui.Text = "oui";
             this.btnOui.UseVisualStyleBackColor = true;
             this.btnOui.Click += new System.EventHandler(this.btnOui_Click);
             // 
-            // Form1
+            // frmGuess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,7 +69,7 @@
             this.Controls.Add(this.btnOui);
             this.Controls.Add(this.btnNon);
             this.Controls.Add(this.lblQuestion);
-            this.Name = "Form1";
+            this.Name = "frmGuess";
             this.Text = "Guess";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

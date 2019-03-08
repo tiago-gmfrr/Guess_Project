@@ -13,7 +13,7 @@ namespace Guess
     public partial class frmGuess : Form
     {
         bool reponse = false;
-
+        public string randomKey;
         //Point de chaque perrsonnage (sert a döfinir quand un perrsonnage ä "gaganer")
         int PointKaaris = 0;
         int PointSnoopDogg = 0;
@@ -25,6 +25,7 @@ namespace Guess
         int PointEmiliaClark = 0;
         int PointMadsMikkelsen = 0;
         int PointScarlettJohansson = 0;
+
 
         IDictionary<string, string> QuestionsPrincipales = new Dictionary<string, string>()
         {
@@ -158,64 +159,106 @@ namespace Guess
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            NewGame();
         }
 
         private void btnOui_Click(object sender, EventArgs e)
         {
-            string keyQuestion = string.Empty;
-
-            if (Kaaris[keyQuestion] == true)
+            
+            if (Kaaris[randomKey] == true)
             {
                 PointKaaris++;
             }
-            if (SnoopDogg[keyQuestion] == true)
+            if (SnoopDogg[randomKey] == true)
             {
                 PointSnoopDogg++;
             }
-            if (ClaudeFrançois[keyQuestion] == true)
+            if (ClaudeFrançois[randomKey] == true)
             {
                 PointClaudeFrançois++;
             }
-            if (EmmaWatson[keyQuestion] == true)
+            if (EmmaWatson[randomKey] == true)
             {
                 PointEmmaWatson++;
             }
-            if (PassePartout[keyQuestion] == true)
+            if (PassePartout[randomKey] == true)
             {
                 PointPassePartout++;
             }
-            if (DenisBrogniart[keyQuestion] == true)
+            if (DenisBrogniart[randomKey] == true)
             {
                 PointDenisBrogniart++;
             }
-            if (MaitreGims[keyQuestion] == true)
+            if (MaitreGims[randomKey] == true)
             {
                 PointMaitreGims++;
             }
-            if (EmiliaClark[keyQuestion] == true)
+            if (EmiliaClark[randomKey] == true)
             {
                 PointEmiliaClark++;
             }
-            if (MadsMikkelsen[keyQuestion] == true)
+            if (MadsMikkelsen[randomKey] == true)
             {
                 PointMadsMikkelsen++;
             }
-            if (ScarlettJohansson[keyQuestion] == true)
+            if (ScarlettJohansson[randomKey] == true)
             {
                 PointScarlettJohansson++;
             }
+            lblQuestion.Text += PointClaudeFrançois;
+            NewGame();
 
         }
 
         private void btnNon_Click(object sender, EventArgs e)
         {
-            reponse = false;
+            if (Kaaris[randomKey] == false)
+            {
+                PointKaaris++;
+            }
+            if (SnoopDogg[randomKey] == false)
+            {
+                PointSnoopDogg++;
+            }
+            if (ClaudeFrançois[randomKey] == false)
+            {
+                PointClaudeFrançois++;
+            }
+            if (EmmaWatson[randomKey] == false)
+            {
+                PointEmmaWatson++;
+            }
+            if (PassePartout[randomKey] == false)
+            {
+                PointPassePartout++;
+            }
+            if (DenisBrogniart[randomKey] == false)
+            {
+                PointDenisBrogniart++;
+            }
+            if (MaitreGims[randomKey] == false)
+            {
+                PointMaitreGims++;
+            }
+            if (EmiliaClark[randomKey] == false)
+            {
+                PointEmiliaClark++;
+            }
+            if (MadsMikkelsen[randomKey] == false)
+            {
+                PointMadsMikkelsen++;
+            }
+            if (ScarlettJohansson[randomKey] == false)
+            {
+                PointScarlettJohansson++;
+            }
+            lblQuestion.Text += PointClaudeFrançois;
+            NewGame();
 
-            
         }
 
-        private string NewGame()
+
+        public void NewGame()
         {
             //RANDOM QUESTIONS
 
@@ -223,10 +266,12 @@ namespace Guess
             Random question = new Random();
             //Création d'une liste des clés du dictionnaire des questions car dictionnaire ne contient pas d'index
             List<string> questionList = new List<string>(QuestionsPrincipales.Keys);
+
+            //Traitement + affichage de la question
             //La question    = index x de questionList;
-            string randomKey = questionList[question.Next(questionList.Count)];
-            //Retourne la question choisi aux hasards
-            return QuestionsPrincipales[randomKey];
+            randomKey = questionList[question.Next(questionList.Count)];
+            //print dans le label la question
+            lblQuestion.Text = QuestionsPrincipales[randomKey];
 
 
 
