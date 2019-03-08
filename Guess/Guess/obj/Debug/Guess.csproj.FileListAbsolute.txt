@@ -18,3 +18,13 @@ C:\Users\DUSSERREJ_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.csproj
 C:\Users\DUSSERREJ_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.csproj.CoreCompileInputs.cache
 C:\Users\DUSSERREJ_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.exe
 C:\Users\DUSSERREJ_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.pdb
+C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\bin\Debug\Guess.exe.config
+C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\bin\Debug\Guess.exe
+C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\bin\Debug\Guess.pdb
+C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.csprojResolveAssemblyReference.cache
+C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.frmGuess.resources
+C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.Properties.Resources.resources
+C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.csproj.GenerateResource.Cache
+C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.csproj.CoreCompileInputs.cache
+C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.exe
+C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.pdb
