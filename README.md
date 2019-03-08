@@ -1,6 +1,14 @@
 # Guess_Project
 School Project
 
+# Commandes pour cloner le projet en local
+- (installer Git Bash, si le logiciel n'est pas installé)
+- Ouvrir Git Bash 
+
+- cd Desktop/
+- git init
+- git clone url du git
+
 # Commandes pour ajouter des modifications
 
 - git add .
