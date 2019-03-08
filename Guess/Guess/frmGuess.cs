@@ -261,7 +261,7 @@ namespace Guess
                 PointScarlettJohansson++;
             }
             lblQuestion.Text += PointClaudeFrançois;
-            NewGame();
+            NextQuestion();
 
         }
 
@@ -281,15 +281,6 @@ namespace Guess
             PointMadsMikkelsen = 0;
             PointScarlettJohansson = 0;
         }
-
-<<<<<<< HEAD
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblQuestion_Click(object sender, EventArgs e)
-=======
         public void NextQuestion()
         {
             //Traitement + affichage de la question
@@ -301,22 +292,27 @@ namespace Guess
         }
 
         public void KiCéKiGanieuh()
->>>>>>> 9e00a678899c44b0eb6313b85ce22b0d20fb7eb2
         {
-            List<int> PointsPersonnages = new List<int>();
-            PointsPersonnages.Add(PointKaaris);
-            PointsPersonnages.Add(PointSnoopDogg);
-            PointsPersonnages.Add(PointClaudeFrançois);
-            PointsPersonnages.Add(PointEmmaWatson);
-            PointsPersonnages.Add(PointPassePartout);
-            PointsPersonnages.Add(PointDenisBrogniart);
-            PointsPersonnages.Add(PointMaitreGims);
-            PointsPersonnages.Add(PointEmiliaClark);
-            PointsPersonnages.Add(PointMadsMikkelsen);
-            PointsPersonnages.Add(PointScarlettJohansson);
+            IDictionary<string, int> PointsPersonnages = new Dictionary<string, int>()
+        {
+            {"Kaaris", PointKaaris},
+            {"SnoopDogg", PointSnoopDogg},
+            {"ClaudeFrancois", PointClaudeFrançois},
+            {"EmmaWatson", PointEmmaWatson},
+            {"PassePartout", PointPassePartout},
+            {"DesinBrognart", PointDenisBrogniart},
+            {"MaitreGims", PointMaitreGims},
+            {"EmiliaClark", PointEmiliaClark},
+            {"MadsMikkelsen", PointMadsMikkelsen},
+            {"ScarletteJohanson", PointScarlettJohansson}
+        };
 
+            int dozo = PointsPersonnages.Values.Max();
+            
+            foreach (string mek in PointsPersonnages.Keys)
+            {
 
-
+            }
         }
     }
 }
