@@ -49,7 +49,7 @@
             // 
             // btnNon
             // 
-            this.btnNon.Location = new System.Drawing.Point(253, 299);
+            this.btnNon.Location = new System.Drawing.Point(276, 299);
             this.btnNon.Name = "btnNon";
             this.btnNon.Size = new System.Drawing.Size(115, 60);
             this.btnNon.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             // btnOui
             // 
-            this.btnOui.Location = new System.Drawing.Point(57, 299);
+            this.btnOui.Location = new System.Drawing.Point(73, 299);
             this.btnOui.Name = "btnOui";
             this.btnOui.Size = new System.Drawing.Size(115, 60);
             this.btnOui.TabIndex = 2;
@@ -80,7 +80,7 @@
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(35, 259);
+            this.btnQuitter.Location = new System.Drawing.Point(57, 99);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(171, 100);
             this.btnQuitter.TabIndex = 4;
@@ -89,7 +89,7 @@
             // 
             // btnLancerPartie
             // 
-            this.btnLancerPartie.Location = new System.Drawing.Point(244, 259);
+            this.btnLancerPartie.Location = new System.Drawing.Point(234, 155);
             this.btnLancerPartie.Name = "btnLancerPartie";
             this.btnLancerPartie.Size = new System.Drawing.Size(179, 100);
             this.btnLancerPartie.TabIndex = 5;
