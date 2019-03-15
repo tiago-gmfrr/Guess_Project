@@ -35,7 +35,7 @@ namespace Guess
         int PointPassePartout = 0;
         int PointDenisBrogniart = 0;
         int PointMaitreGims = 0;
-        int PointEmiliaClark = 12;
+        int PointEmiliaClark = 0;
         int PointMadsMikkelsen = 0;
         int PointScarlettJohansson = 11;
 
@@ -277,23 +277,15 @@ namespace Guess
                 PointScarlettJohansson++;
             }
             lblQuestion.Text += PointClaudeFrançois;
-<<<<<<< HEAD
             NextQuestion();
-=======
-            
->>>>>>> 3fe001712effc5a01341de57f002fdcaf024a170
 
         }
-
-<<<<<<< HEAD
         /// <summary>
         /// Les boutons deviennet invisibles / visibles
         /// Les pints de chaque personne sont mis a 0
         /// La liste de question est initialisé
         /// </summary>
-=======
         //Creation d'une nouvelle liste de question
->>>>>>> 69cb03e97a11997f97a13578c469de03fd66bbb3
         public void NewGame()
         {
             btnLancerPartie.Visible = false;
@@ -316,37 +308,10 @@ namespace Guess
             PointMadsMikkelsen = 0;
             PointScarlettJohansson = 0;
         }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-        
-=======
-        //Traitement de la liste des questions + Affichage de la question
->>>>>>> acbd561eee749c67427f3f0c9a2ab200d328988b
->>>>>>> 3fe001712effc5a01341de57f002fdcaf024a170
-        public void NextQuestion()
-        {
-            //La question    = index [random] de questionList
-            questionActuelle = questionList[question.Next(questionList.Count)]; //Par défaut le random va de 0 à count
-            //print dans le label la question
-            lblQuestion.Text = QuestionsPrincipales[questionActuelle];
-            questionList.Remove(questionActuelle);
-
-        }
-
-<<<<<<< HEAD
         public int KiCéKiGanieuh()
-=======
-        public void KiCéKiGanieuh()
-<<<<<<< HEAD
         {
             IDictionary<string, int> PointsPersonnages = new Dictionary<string, int>()
-        {
+            {
             {"Kaaris", PointKaaris},
             {"SnoopDogg", PointSnoopDogg},
             {"ClaudeFrancois", PointClaudeFrançois},
@@ -357,36 +322,10 @@ namespace Guess
             {"EmiliaClark", PointEmiliaClark},
             {"MadsMikkelsen", PointMadsMikkelsen},
             {"ScarletteJohanson", PointScarlettJohansson}
-        };
+            };
 
-            int dozo = PointsPersonnages.Values.Max();
-            
-            foreach (string mek in PointsPersonnages.Keys)
-            {
-
-            }
-=======
-
->>>>>>> acbd561eee749c67427f3f0c9a2ab200d328988b
-        {
-            List<int> PointsPersonnages = new List<int>();
-        PointsPersonnages.Add(PointKaaris);
-            PointsPersonnages.Add(PointSnoopDogg);
-            PointsPersonnages.Add(PointClaudeFrançois);
-            PointsPersonnages.Add(PointEmmaWatson);
-            PointsPersonnages.Add(PointPassePartout);
-            PointsPersonnages.Add(PointDenisBrogniart);
-            PointsPersonnages.Add(PointMaitreGims);
-            PointsPersonnages.Add(PointEmiliaClark);
-            PointsPersonnages.Add(PointMadsMikkelsen);
-            PointsPersonnages.Add(PointScarlettJohansson);
-
-<<<<<<< HEAD
-            int max = PointsPersonnages.Max();
-
+            int max = Convert.ToInt32(PointsPersonnages.Max());
             return max;
-=======
-            
 
         }
 
@@ -394,12 +333,6 @@ namespace Guess
         {
             // Lancer la partie
             NewGame();
-            NextQuestion();
-        
->>>>>>> acbd561eee749c67427f3f0c9a2ab200d328988b
->>>>>>> 3fe001712effc5a01341de57f002fdcaf024a170
         }
-
-        public void 
     }
 }

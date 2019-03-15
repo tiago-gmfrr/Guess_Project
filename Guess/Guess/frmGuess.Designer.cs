@@ -34,12 +34,8 @@
             this.pbxGuess = new System.Windows.Forms.PictureBox();
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnLancerPartie = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-=======
             ((System.ComponentModel.ISupportInitialize)(this.pbxGuess)).BeginInit();
->>>>>>> acbd561eee749c67427f3f0c9a2ab200d328988b
             this.SuspendLayout();
             // 
             // lblQuestion
