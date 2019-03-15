@@ -161,6 +161,7 @@
             this.àproposdeToolStripMenuItem.Name = "àproposdeToolStripMenuItem";
             this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.àproposdeToolStripMenuItem.Text = "À &propos de...";
+            this.àproposdeToolStripMenuItem.Click += new System.EventHandler(this.àproposdeToolStripMenuItem_Click);
             // 
             // listeDesPersonnagesToolStripMenuItem
             // 

@@ -434,9 +434,10 @@ namespace Guess
             Application.Exit();
         }
 
-        private void frmGuess_Load(object sender, EventArgs e)
+        private void àproposdeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            abxAPropos aPropos = new abxAPropos();
+            aPropos.ShowDialog();
         }
     }
 }
