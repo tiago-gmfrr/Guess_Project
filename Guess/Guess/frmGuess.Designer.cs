@@ -36,11 +36,11 @@
             this.btnLancerPartie = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.tspMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtsMenuPrincipal = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.mtsQuitter = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.àproposdeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtsMenuPrincipal = new System.Windows.Forms.ToolStripMenuItem();
             this.listeDesPersonnagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGuess)).BeginInit();
             this.menu.SuspendLayout();
@@ -49,7 +49,7 @@
             // lblQuestion
             // 
             this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Location = new System.Drawing.Point(95, 186);
+            this.lblQuestion.Location = new System.Drawing.Point(82, 189);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(43, 13);
             this.lblQuestion.TabIndex = 0;
@@ -58,9 +58,9 @@
             // 
             // btnNon
             // 
-            this.btnNon.Location = new System.Drawing.Point(286, 318);
+            this.btnNon.Location = new System.Drawing.Point(243, 280);
             this.btnNon.Name = "btnNon";
-            this.btnNon.Size = new System.Drawing.Size(115, 60);
+            this.btnNon.Size = new System.Drawing.Size(171, 100);
             this.btnNon.TabIndex = 1;
             this.btnNon.Text = "non";
             this.btnNon.UseVisualStyleBackColor = true;
@@ -69,9 +69,9 @@
             // 
             // btnOui
             // 
-            this.btnOui.Location = new System.Drawing.Point(73, 328);
+            this.btnOui.Location = new System.Drawing.Point(38, 280);
             this.btnOui.Name = "btnOui";
-            this.btnOui.Size = new System.Drawing.Size(115, 60);
+            this.btnOui.Size = new System.Drawing.Size(171, 100);
             this.btnOui.TabIndex = 2;
             this.btnOui.Text = "oui";
             this.btnOui.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(57, 222);
+            this.btnQuitter.Location = new System.Drawing.Point(38, 270);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(171, 100);
             this.btnQuitter.TabIndex = 4;
@@ -99,9 +99,9 @@
             // 
             // btnLancerPartie
             // 
-            this.btnLancerPartie.Location = new System.Drawing.Point(243, 222);
+            this.btnLancerPartie.Location = new System.Drawing.Point(243, 270);
             this.btnLancerPartie.Name = "btnLancerPartie";
-            this.btnLancerPartie.Size = new System.Drawing.Size(179, 100);
+            this.btnLancerPartie.Size = new System.Drawing.Size(171, 100);
             this.btnLancerPartie.TabIndex = 5;
             this.btnLancerPartie.Text = "Lancer une partie";
             this.btnLancerPartie.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@
             this.aideToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(445, 24);
+            this.menu.Size = new System.Drawing.Size(435, 24);
             this.menu.TabIndex = 6;
             this.menu.Text = "menuStrip1";
             // 
@@ -127,6 +127,13 @@
             this.tspMenu.Name = "tspMenu";
             this.tspMenu.Size = new System.Drawing.Size(50, 20);
             this.tspMenu.Text = "&Menu";
+            // 
+            // mtsMenuPrincipal
+            // 
+            this.mtsMenuPrincipal.Name = "mtsMenuPrincipal";
+            this.mtsMenuPrincipal.Size = new System.Drawing.Size(154, 22);
+            this.mtsMenuPrincipal.Text = "Menu Principal";
+            this.mtsMenuPrincipal.Click += new System.EventHandler(this.mtsMenuPrincipal_Click);
             // 
             // toolStripSeparator2
             // 
@@ -155,13 +162,6 @@
             this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.àproposdeToolStripMenuItem.Text = "À &propos de...";
             // 
-            // mtsMenuPrincipal
-            // 
-            this.mtsMenuPrincipal.Name = "mtsMenuPrincipal";
-            this.mtsMenuPrincipal.Size = new System.Drawing.Size(154, 22);
-            this.mtsMenuPrincipal.Text = "Menu Principal";
-            this.mtsMenuPrincipal.Click += new System.EventHandler(this.mtsMenuPrincipal_Click);
-            // 
             // listeDesPersonnagesToolStripMenuItem
             // 
             this.listeDesPersonnagesToolStripMenuItem.Name = "listeDesPersonnagesToolStripMenuItem";
@@ -172,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 399);
+            this.ClientSize = new System.Drawing.Size(435, 392);
             this.Controls.Add(this.btnLancerPartie);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.pbxGuess);
@@ -184,7 +184,6 @@
             this.Name = "frmGuess";
             this.Text = "Guess";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmGuess_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxGuess)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
