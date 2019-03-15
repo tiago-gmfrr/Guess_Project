@@ -299,6 +299,8 @@ namespace Guess
             btnNon.Visible = true;
             lblQuestion.Visible = true;
 
+            countRound = 0; //numéro du tour
+
             questionList = new List<string>(QuestionsPrincipales.Keys);
 
             PointKaaris = 0;
@@ -312,6 +314,7 @@ namespace Guess
             PointMadsMikkelsen = 0;
             PointScarlettJohansson = 0;
         }
+
         public string KiCéKiGanieuh()
         {
             IDictionary<string, int> PointsPersonnages = new Dictionary<string, int>()
@@ -327,15 +330,18 @@ namespace Guess
             {"MadsMikkelsen", PointMadsMikkelsen},
             {"ScarletteJohanson", PointScarlettJohansson}
             };
-
-            int max = Convert.ToInt32(PointsPersonnages.Values.Max());
+            
             string personnageGagnant = string.Empty;
 
 
             foreach (KeyValuePair<string, int> personnage in PointsPersonnages)
             {
-                if (personnage.Value == max)
+                if (personnage.Value == Convert.ToInt32(PointsPersonnages.Values.Max()))
                 {
+                    if (personnageGagnant == string.Empty)
+                    {
+
+                    }
                     personnageGagnant = personnage.Key;
                 }
             }
@@ -362,6 +368,10 @@ namespace Guess
             else
             {
                 phraseAffichee = "Vous avez terminé les questions.";
+                //Affichage des personnages
+                buttonVisibilite();
+                btnLancerPartie.Text = "Recommencer";
+
             }
 
             //print dans le label la question
@@ -388,6 +398,7 @@ namespace Guess
             btnNon.Visible = !btnNon.Visible;
             lblQuestion.Visible = !lblQuestion.Visible;
         }
+        
 
         private void mtsMenuPrincipal_Click(object sender, EventArgs e)
         {
@@ -414,6 +425,11 @@ namespace Guess
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmGuess_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
