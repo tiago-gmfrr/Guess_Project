@@ -11,6 +11,8 @@ School Project
 
 # Commandes pour ajouter des modifications
 
+/!\ Mettez-vous dans le bon répertoire avant 
+
 - git add .
 - git commit -m "..."
 - git pull
