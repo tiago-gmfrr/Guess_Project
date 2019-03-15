@@ -233,7 +233,6 @@ namespace Guess
             {
                 PointScarlettJohansson++;
             }
-            lblQuestion.Text += PointClaudeFrançois;
             NextQuestion();
 
         }
@@ -280,7 +279,6 @@ namespace Guess
             {
                 PointScarlettJohansson++;
             }
-            lblQuestion.Text += PointClaudeFrançois;
             NextQuestion();
 
         }
@@ -443,7 +441,12 @@ namespace Guess
         private void listeDesPersonnagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListePerso per = new frmListePerso();
-            per.ShowDialog();
+            per.Show();
+        }
+
+        private void frmGuess_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

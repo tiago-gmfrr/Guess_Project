@@ -125,7 +125,7 @@ namespace Guess.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Mads_Mikelsen {
             get {
-                object obj = ResourceManager.GetObject("Mads Mikelsen", resourceCulture);
+                object obj = ResourceManager.GetObject("Mads_Mikelsen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -44,3 +44,5 @@ C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.abxAPropos
 C:\Users\DUSSERREJ_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.frmListePerso.resources
 >>>>>>> ba2c8058f15183939749548529691f7a0a086e9b
 C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.frmListePerso.resources
+C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.abxAPropos.resources
+C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.frmListePerso.resources

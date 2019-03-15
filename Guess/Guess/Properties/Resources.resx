@@ -151,7 +151,7 @@
   <data name="snoop_dogg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\snoop-dogg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mads Mikelsen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Mads_Mikelsen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mads Mikelsen.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

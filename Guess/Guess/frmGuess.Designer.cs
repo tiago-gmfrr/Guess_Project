@@ -186,6 +186,7 @@
             this.Name = "frmGuess";
             this.Text = "Guess";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmGuess_FormClosing);
+            this.Load += new System.EventHandler(this.frmGuess_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxGuess)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
