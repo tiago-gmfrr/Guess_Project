@@ -431,5 +431,11 @@ namespace Guess
         {
 
         }
+
+        private void listeDesPersonnagesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListePerso per = new frmListePerso();
+            per.ShowDialog();
+        }
     }
 }

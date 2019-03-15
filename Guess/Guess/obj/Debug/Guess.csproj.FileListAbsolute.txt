@@ -38,3 +38,4 @@ C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.csproj.Gen
 C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.csproj.CoreCompileInputs.cache
 C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.exe
 C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.pdb
+C:\Users\DUSSERREJ_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.frmListePerso.resources

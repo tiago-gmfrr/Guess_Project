@@ -52,10 +52,19 @@
     <Compile Include="frmGuess.Designer.cs">
       <DependentUpon>frmGuess.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListePerso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListePerso.Designer.cs">
+      <DependentUpon>frmListePerso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmGuess.resx">
       <DependentUpon>frmGuess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListePerso.resx">
+      <DependentUpon>frmListePerso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,6 +94,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GuessTitleIMG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Claude_François.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Denis Brognart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emilia-clarke.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emma-watson.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maitre Gims.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passe_partout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scarlette Johanson.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snoop-dogg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kaaris.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mads Mikelsen.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
