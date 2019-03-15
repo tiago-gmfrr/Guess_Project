@@ -190,12 +190,6 @@ namespace Guess
             lblQuestion.Left = 73;
         }
 
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnOui_Click(object sender, EventArgs e)
         {
 
@@ -406,6 +400,9 @@ namespace Guess
             Application.Exit();
         }
 
+        /// <summary>
+        /// Si l'utilisateur essaie de fermer le programme, une MessageBox aparait pour demander la confirmation
+        /// </summary>
         private void frmGuess_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Voulez vous Quitter?", "Fermer Application", MessageBoxButtons.YesNo) != DialogResult.Yes)
