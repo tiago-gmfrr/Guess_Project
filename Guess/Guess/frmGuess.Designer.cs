@@ -34,7 +34,16 @@
             this.pbxGuess = new System.Windows.Forms.PictureBox();
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnLancerPartie = new System.Windows.Forms.Button();
+            this.menu = new System.Windows.Forms.MenuStrip();
+            this.tspMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.mtsQuitter = new System.Windows.Forms.ToolStripMenuItem();
+            this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.àproposdeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtsMenuPrincipal = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeDesPersonnagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGuess)).BeginInit();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblQuestion
@@ -49,7 +58,7 @@
             // 
             // btnNon
             // 
-            this.btnNon.Location = new System.Drawing.Point(276, 299);
+            this.btnNon.Location = new System.Drawing.Point(286, 318);
             this.btnNon.Name = "btnNon";
             this.btnNon.Size = new System.Drawing.Size(115, 60);
             this.btnNon.TabIndex = 1;
@@ -60,7 +69,7 @@
             // 
             // btnOui
             // 
-            this.btnOui.Location = new System.Drawing.Point(73, 299);
+            this.btnOui.Location = new System.Drawing.Point(73, 328);
             this.btnOui.Name = "btnOui";
             this.btnOui.Size = new System.Drawing.Size(115, 60);
             this.btnOui.TabIndex = 2;
@@ -80,16 +89,17 @@
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(57, 155);
+            this.btnQuitter.Location = new System.Drawing.Point(57, 222);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(171, 100);
             this.btnQuitter.TabIndex = 4;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
             // btnLancerPartie
             // 
-            this.btnLancerPartie.Location = new System.Drawing.Point(234, 155);
+            this.btnLancerPartie.Location = new System.Drawing.Point(243, 222);
             this.btnLancerPartie.Name = "btnLancerPartie";
             this.btnLancerPartie.Size = new System.Drawing.Size(179, 100);
             this.btnLancerPartie.TabIndex = 5;
@@ -97,21 +107,87 @@
             this.btnLancerPartie.UseVisualStyleBackColor = true;
             this.btnLancerPartie.Click += new System.EventHandler(this.btnLancerPartie_Click);
             // 
+            // menu
+            // 
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tspMenu,
+            this.aideToolStripMenuItem});
+            this.menu.Location = new System.Drawing.Point(0, 0);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(445, 24);
+            this.menu.TabIndex = 6;
+            this.menu.Text = "menuStrip1";
+            // 
+            // tspMenu
+            // 
+            this.tspMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mtsMenuPrincipal,
+            this.toolStripSeparator2,
+            this.mtsQuitter});
+            this.tspMenu.Name = "tspMenu";
+            this.tspMenu.Size = new System.Drawing.Size(50, 20);
+            this.tspMenu.Text = "&Menu";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(151, 6);
+            // 
+            // mtsQuitter
+            // 
+            this.mtsQuitter.Name = "mtsQuitter";
+            this.mtsQuitter.Size = new System.Drawing.Size(154, 22);
+            this.mtsQuitter.Text = "&Quitter";
+            this.mtsQuitter.Click += new System.EventHandler(this.mtsQuitter_Click);
+            // 
+            // aideToolStripMenuItem
+            // 
+            this.aideToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.àproposdeToolStripMenuItem,
+            this.listeDesPersonnagesToolStripMenuItem});
+            this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.aideToolStripMenuItem.Text = "&Aide";
+            // 
+            // àproposdeToolStripMenuItem
+            // 
+            this.àproposdeToolStripMenuItem.Name = "àproposdeToolStripMenuItem";
+            this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.àproposdeToolStripMenuItem.Text = "À &propos de...";
+            // 
+            // mtsMenuPrincipal
+            // 
+            this.mtsMenuPrincipal.Name = "mtsMenuPrincipal";
+            this.mtsMenuPrincipal.Size = new System.Drawing.Size(154, 22);
+            this.mtsMenuPrincipal.Text = "Menu Principal";
+            this.mtsMenuPrincipal.Click += new System.EventHandler(this.mtsMenuPrincipal_Click);
+            // 
+            // listeDesPersonnagesToolStripMenuItem
+            // 
+            this.listeDesPersonnagesToolStripMenuItem.Name = "listeDesPersonnagesToolStripMenuItem";
+            this.listeDesPersonnagesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.listeDesPersonnagesToolStripMenuItem.Text = "Liste des Personnages";
+            // 
             // frmGuess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 454);
+            this.ClientSize = new System.Drawing.Size(445, 399);
             this.Controls.Add(this.btnLancerPartie);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.pbxGuess);
             this.Controls.Add(this.btnOui);
             this.Controls.Add(this.btnNon);
             this.Controls.Add(this.lblQuestion);
+            this.Controls.Add(this.menu);
+            this.MainMenuStrip = this.menu;
             this.Name = "frmGuess";
             this.Text = "Guess";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmGuess_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxGuess)).EndInit();
+            this.menu.ResumeLayout(false);
+            this.menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,6 +201,14 @@
         private System.Windows.Forms.PictureBox pbxGuess;
         private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.Button btnLancerPartie;
+        private System.Windows.Forms.MenuStrip menu;
+        private System.Windows.Forms.ToolStripMenuItem tspMenu;
+        private System.Windows.Forms.ToolStripMenuItem mtsMenuPrincipal;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem mtsQuitter;
+        private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem àproposdeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeDesPersonnagesToolStripMenuItem;
     }
 }
 

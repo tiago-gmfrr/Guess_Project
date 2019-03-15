@@ -42,8 +42,8 @@ namespace Guess
         int PointMadsMikkelsen = 0;
         int PointScarlettJohansson = 0;
 
-        
-        
+
+
 
 
         IDictionary<string, string> QuestionsPrincipales = new Dictionary<string, string>()
@@ -174,24 +174,36 @@ namespace Guess
         {
             InitializeComponent();
             //Position boutons
-            //Btn quitter (en bas a gauche)
-            btnQuitter.Top = 259;
-            btnQuitter.Left = 35;
+            //Btn quitter (en bas a gauche) 38; 270
+            btnQuitter.Top = 270;
+            btnQuitter.Left = 38;
 
-            //Btn lancer partie (en bas a droite)
-            btnLancerPartie.Top = 259;
-            btnLancerPartie.Left = 35;
+            //Btn lancer partie (en bas a droite) 243; 270
+            btnLancerPartie.Top = 270;
+            btnLancerPartie.Left = 230;
+
+            //btn Non (en bas a gauche)
+            btnNon.Top = 270;
+            btnNon.Left = 38;
+
+            //btn Oui (en bas a droite)
+            btnOui.Top = 270;
+            btnOui.Left = 230;
+
+            //lbl Question (centre)
+            lblQuestion.Top = 194;
+            lblQuestion.Left = 73;
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnOui_Click(object sender, EventArgs e)
         {
-            
+
             if (Kaaris[questionActuelle] == true)
             {
                 PointKaaris++;
@@ -331,7 +343,7 @@ namespace Guess
             return max;
 
         }
-        
+
         //Traitement de la liste des questions + Affichage de la question
         public void NextQuestion()
         {
@@ -361,6 +373,7 @@ namespace Guess
              * lbl question restante . text = "Question restante : "+questionRestante;
              */
         }
+
         private void btnLancerPartie_Click(object sender, EventArgs e)
         {
             // Lancer la partie
@@ -368,5 +381,38 @@ namespace Guess
             NextQuestion();
         }
 
+        private void buttonVisibilite()
+        {
+            btnLancerPartie.Visible = !btnLancerPartie.Visible;
+            btnQuitter.Visible = !btnQuitter.Visible;
+
+            btnOui.Visible = !btnOui.Visible;
+            btnNon.Visible = !btnNon.Visible;
+            lblQuestion.Visible = !lblQuestion.Visible;
+        }
+
+        private void mtsMenuPrincipal_Click(object sender, EventArgs e)
+        {
+            buttonVisibilite();
+            //NewGame();
+        }
+
+        private void mtsQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmGuess_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Voulez vous Quitter?", "Fermer Application", MessageBoxButtons.YesNo) != DialogResult.Yes)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
