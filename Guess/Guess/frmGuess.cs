@@ -25,6 +25,9 @@ namespace Guess
         public string questionActuelle;
         public string randomKey;
 
+        //num de la question
+        int countRound = 0;
+
 
 
         //Point de chaque perrsonnage (sert a döfinir quand un perrsonnage ä "gaganer")
@@ -37,7 +40,7 @@ namespace Guess
         int PointMaitreGims = 0;
         int PointEmiliaClark = 0;
         int PointMadsMikkelsen = 0;
-        int PointScarlettJohansson = 11;
+        int PointScarlettJohansson = 0;
 
         
         
@@ -328,11 +331,42 @@ namespace Guess
             return max;
 
         }
+        
+        //Traitement de la liste des questions + Affichage de la question
+        public void NextQuestion()
+        {
+            //La question    = index [random] de questionList
 
+            int questionRestante = questionList.Count(); //Compte le nombre de questions restantes
+            string phraseAffichee; //Phrase qui sera affichée à la fin
+            countRound++;
+
+            //Vérifie s'il reste des questions
+            if (questionRestante > 0)
+            {
+
+                questionActuelle = questionList[question.Next(questionList.Count)]; //Génère un random index pour la liste
+                phraseAffichee = countRound + ". " + QuestionsPrincipales[questionActuelle];
+                questionList.Remove(questionActuelle);  //Retire le critère de la liste des questions
+            }
+            else
+            {
+                phraseAffichee = "Vous avez terminé les questions.";
+            }
+
+            //print dans le label la question
+            lblQuestion.Text = phraseAffichee;
+
+            /*
+             * lbl question restante . text = "Question restante : "+questionRestante;
+             */
+        }
         private void btnLancerPartie_Click(object sender, EventArgs e)
         {
             // Lancer la partie
             NewGame();
+            NextQuestion();
         }
+
     }
 }
