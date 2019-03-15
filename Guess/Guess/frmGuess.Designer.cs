@@ -168,6 +168,7 @@
             this.listeDesPersonnagesToolStripMenuItem.Name = "listeDesPersonnagesToolStripMenuItem";
             this.listeDesPersonnagesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.listeDesPersonnagesToolStripMenuItem.Text = "Liste des Personnages";
+            this.listeDesPersonnagesToolStripMenuItem.Click += new System.EventHandler(this.listeDesPersonnagesToolStripMenuItem_Click);
             // 
             // frmGuess
             // 

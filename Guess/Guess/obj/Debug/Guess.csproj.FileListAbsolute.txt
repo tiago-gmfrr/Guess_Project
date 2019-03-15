@@ -38,4 +38,9 @@ C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.csproj.Gen
 C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.csproj.CoreCompileInputs.cache
 C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.exe
 C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.pdb
+<<<<<<< HEAD
 C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.abxAPropos.resources
+=======
+C:\Users\DUSSERREJ_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.frmListePerso.resources
+>>>>>>> ba2c8058f15183939749548529691f7a0a086e9b
+C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.frmListePerso.resources

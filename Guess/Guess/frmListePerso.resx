@@ -117,41 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GuessTitleIMG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuessTitleIMG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Maitre_Gims" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Maitre Gims.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kaaris" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kaaris.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Denis_Brognart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Denis Brognart.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="emilia_clarke" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\emilia-clarke.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="emma_watson" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\emma-watson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Claude_François" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Claude_François.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Personnages__Criteres" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Personnages--Criteres.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="Scarlette_Johanson" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Scarlette Johanson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="passe_partout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\passe_partout.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="snoop_dogg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snoop-dogg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mads Mikelsen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mads Mikelsen.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

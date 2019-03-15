@@ -439,5 +439,11 @@ namespace Guess
             abxAPropos aPropos = new abxAPropos();
             aPropos.ShowDialog();
         }
+
+        private void listeDesPersonnagesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListePerso per = new frmListePerso();
+            per.ShowDialog();
+        }
     }
 }

@@ -63,9 +63,89 @@ namespace Guess.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Claude_François {
+            get {
+                object obj = ResourceManager.GetObject("Claude_François", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Denis_Brognart {
+            get {
+                object obj = ResourceManager.GetObject("Denis_Brognart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emilia_clarke {
+            get {
+                object obj = ResourceManager.GetObject("emilia_clarke", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emma_watson {
+            get {
+                object obj = ResourceManager.GetObject("emma_watson", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GuessTitleIMG {
             get {
                 object obj = ResourceManager.GetObject("GuessTitleIMG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kaaris {
+            get {
+                object obj = ResourceManager.GetObject("Kaaris", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mads_Mikelsen {
+            get {
+                object obj = ResourceManager.GetObject("Mads Mikelsen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Maitre_Gims {
+            get {
+                object obj = ResourceManager.GetObject("Maitre_Gims", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap passe_partout {
+            get {
+                object obj = ResourceManager.GetObject("passe_partout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -78,6 +158,26 @@ namespace Guess.Properties {
         internal static string Personnages__Criteres {
             get {
                 return ResourceManager.GetString("Personnages__Criteres", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Scarlette_Johanson {
+            get {
+                object obj = ResourceManager.GetObject("Scarlette_Johanson", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap snoop_dogg {
+            get {
+                object obj = ResourceManager.GetObject("snoop_dogg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
