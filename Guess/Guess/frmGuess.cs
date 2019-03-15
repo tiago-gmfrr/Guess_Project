@@ -319,6 +319,7 @@ namespace Guess
             PointMadsMikkelsen = 0;
             PointScarlettJohansson = 0;
         }
+
         public int KiCéKiGanieuh()
         {
             IDictionary<string, int> PointsPersonnages = new Dictionary<string, int>()
