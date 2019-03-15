@@ -361,17 +361,24 @@ namespace Guess
             if (questionRestante > 0)
             {
 
-                questionActuelle = questionList[question.Next(questionList.Count)]; //Génère un random index pour la liste
+                questionActuelle = questionList[question.Next(questionList.Count)]; //Génère question en fonction d'un random index
                 phraseAffichee = countRound + ". " + QuestionsPrincipales[questionActuelle];
                 questionList.Remove(questionActuelle);  //Retire le critère de la liste des questions
             }
             else
             {
-                phraseAffichee = "Vous avez terminé les questions.";
                 //Affichage des personnages
+                phraseAffichee = "Vous avez terminé les questions."
+                    + Environment.NewLine
+                    + "Il s'agit de "
+                    + KiCéKiGanieuh();
+
+                //Modification des boutons en fin de partie
                 buttonVisibilite();
                 btnLancerPartie.Text = "Recommencer";
 
+                //Assure la visibilité du label
+                lblQuestion.Visible = true;
             }
 
             //print dans le label la question
