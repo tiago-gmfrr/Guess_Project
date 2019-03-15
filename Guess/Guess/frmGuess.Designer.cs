@@ -36,11 +36,11 @@
             this.btnLancerPartie = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.tspMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtsMenuPrincipal = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.mtsQuitter = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.àproposdeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtsMenuPrincipal = new System.Windows.Forms.ToolStripMenuItem();
             this.listeDesPersonnagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGuess)).BeginInit();
             this.menu.SuspendLayout();
@@ -128,6 +128,13 @@
             this.tspMenu.Size = new System.Drawing.Size(50, 20);
             this.tspMenu.Text = "&Menu";
             // 
+            // mtsMenuPrincipal
+            // 
+            this.mtsMenuPrincipal.Name = "mtsMenuPrincipal";
+            this.mtsMenuPrincipal.Size = new System.Drawing.Size(154, 22);
+            this.mtsMenuPrincipal.Text = "Menu Principal";
+            this.mtsMenuPrincipal.Click += new System.EventHandler(this.mtsMenuPrincipal_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -154,13 +161,6 @@
             this.àproposdeToolStripMenuItem.Name = "àproposdeToolStripMenuItem";
             this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.àproposdeToolStripMenuItem.Text = "À &propos de...";
-            // 
-            // mtsMenuPrincipal
-            // 
-            this.mtsMenuPrincipal.Name = "mtsMenuPrincipal";
-            this.mtsMenuPrincipal.Size = new System.Drawing.Size(154, 22);
-            this.mtsMenuPrincipal.Text = "Menu Principal";
-            this.mtsMenuPrincipal.Click += new System.EventHandler(this.mtsMenuPrincipal_Click);
             // 
             // listeDesPersonnagesToolStripMenuItem
             // 

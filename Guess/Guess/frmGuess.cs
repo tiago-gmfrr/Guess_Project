@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Guess
@@ -323,7 +318,7 @@ namespace Guess
             PointMadsMikkelsen = 0;
             PointScarlettJohansson = 0;
         }
-        public int KiCéKiGanieuh()
+        public string KiCéKiGanieuh()
         {
             IDictionary<string, int> PointsPersonnages = new Dictionary<string, int>()
             {
@@ -339,9 +334,18 @@ namespace Guess
             {"ScarletteJohanson", PointScarlettJohansson}
             };
 
-            int max = Convert.ToInt32(PointsPersonnages.Max());
-            return max;
+            int max = Convert.ToInt32(PointsPersonnages.Values.Max());
+            string personnageGagnant = string.Empty;
 
+
+            foreach (KeyValuePair<string, int> personnage in PointsPersonnages)
+            {
+                if (personnage.Value == max)
+                {
+                    personnageGagnant = personnage.Key;
+                }
+            }
+            return personnageGagnant;
         }
 
         //Traitement de la liste des questions + Affichage de la question
