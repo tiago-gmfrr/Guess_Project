@@ -327,15 +327,18 @@ namespace Guess
             {"MadsMikkelsen", PointMadsMikkelsen},
             {"ScarletteJohanson", PointScarlettJohansson}
             };
-
-            int max = Convert.ToInt32(PointsPersonnages.Values.Max());
+            
             string personnageGagnant = string.Empty;
 
 
             foreach (KeyValuePair<string, int> personnage in PointsPersonnages)
             {
-                if (personnage.Value == max)
+                if (personnage.Value == Convert.ToInt32(PointsPersonnages.Values.Max());)
                 {
+                    if (personnageGagnant == string.Empty)
+                    {
+
+                    }
                     personnageGagnant = personnage.Key;
                 }
             }
