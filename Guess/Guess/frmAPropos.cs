@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Guess
 {
-    partial class abxAPropos : Form
+    partial class frmAPropos : Form
     {
-        public abxAPropos()
+        public frmAPropos()
         {
             InitializeComponent();
             this.Text = String.Format("À propos de {0}", AssemblyTitle);

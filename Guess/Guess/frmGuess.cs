@@ -317,16 +317,16 @@ namespace Guess
         {
             IDictionary<string, int> PointsPersonnages = new Dictionary<string, int>()
             {
-            {"Kaaris", PointKaaris},
-            {"SnoopDogg", PointSnoopDogg},
-            {"ClaudeFrancois", PointClaudeFrançois},
-            {"EmmaWatson", PointEmmaWatson},
-            {"PassePartout", PointPassePartout},
-            {"DesinBrognart", PointDenisBrogniart},
-            {"MaitreGims", PointMaitreGims},
-            {"EmiliaClark", PointEmiliaClark},
-            {"MadsMikkelsen", PointMadsMikkelsen},
-            {"ScarletteJohanson", PointScarlettJohansson}
+            {"kaaris", PointKaaris},
+            {"Snoop Dogg", PointSnoopDogg},
+            {"Claude Francois", PointClaudeFrançois},
+            {"Emma Watson", PointEmmaWatson},
+            {"Passe-Partout", PointPassePartout},
+            {"DenisBrognart", PointDenisBrogniart},
+            {"Maitre Gims", PointMaitreGims},
+            {"Emilia Clark", PointEmiliaClark},
+            {"Mads Mikkelsen", PointMadsMikkelsen},
+            {"Scarlett Johansson", PointScarlettJohansson}
             };
             
             string personnageGagnant = string.Empty;
@@ -434,7 +434,7 @@ namespace Guess
 
         private void àproposdeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            abxAPropos aPropos = new abxAPropos();
+            frmAPropos aPropos = new frmAPropos();
             aPropos.ShowDialog();
         }
 

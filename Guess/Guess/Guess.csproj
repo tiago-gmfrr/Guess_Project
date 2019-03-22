@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="abxAPropos.cs">
+    <Compile Include="frmAPropos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="abxAPropos.Designer.cs">
-      <DependentUpon>abxAPropos.cs</DependentUpon>
+    <Compile Include="frmAPropos.Designer.cs">
+      <DependentUpon>frmAPropos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGuess.cs">
       <SubType>Form</SubType>
@@ -66,8 +66,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="abxAPropos.resx">
-      <DependentUpon>abxAPropos.cs</DependentUpon>
+    <EmbeddedResource Include="frmAPropos.resx">
+      <DependentUpon>frmAPropos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGuess.resx">
       <DependentUpon>frmGuess.cs</DependentUpon>
