@@ -48,12 +48,12 @@
             // 
             // lblQuestion
             // 
-            this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Location = new System.Drawing.Point(82, 189);
+            this.lblQuestion.Location = new System.Drawing.Point(0, 177);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(43, 13);
+            this.lblQuestion.Size = new System.Drawing.Size(435, 40);
             this.lblQuestion.TabIndex = 0;
             this.lblQuestion.Text = "aaaaaa";
+            this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblQuestion.Visible = false;
             // 
             // btnNon
@@ -182,7 +182,9 @@
             this.Controls.Add(this.btnNon);
             this.Controls.Add(this.lblQuestion);
             this.Controls.Add(this.menu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menu;
+            this.MaximizeBox = false;
             this.Name = "frmGuess";
             this.Text = "Guess";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmGuess_FormClosing);

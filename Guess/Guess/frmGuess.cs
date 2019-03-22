@@ -23,7 +23,8 @@ namespace Guess
         //num de la question
         int countRound = 0;
 
-
+        //en jeu ou sur le menu
+        bool enJeu = false;
 
         //Point de chaque perrsonnage (sert a döfinir quand un perrsonnage ä "gaganer")
         int PointKaaris = 0;
@@ -375,6 +376,8 @@ namespace Guess
                 buttonVisibilite();
                 btnLancerPartie.Text = "Recommencer";
 
+                enJeu = false;
+
                 //Assure la visibilité du label
                 lblQuestion.Visible = true;
             }
@@ -390,6 +393,7 @@ namespace Guess
         private void btnLancerPartie_Click(object sender, EventArgs e)
         {
             // Lancer la partie
+            enJeu = true;
             NewGame();
             NextQuestion();
         }
@@ -407,8 +411,12 @@ namespace Guess
 
         private void mtsMenuPrincipal_Click(object sender, EventArgs e)
         {
-            buttonVisibilite();
-            //NewGame();
+            if (enJeu)
+            {
+                buttonVisibilite();
+                enJeu = false;
+            }
+            
         }
 
         private void mtsQuitter_Click(object sender, EventArgs e)
@@ -421,7 +429,7 @@ namespace Guess
         /// </summary>
         private void frmGuess_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Voulez vous Quitter?", "Fermer Application", MessageBoxButtons.YesNo) != DialogResult.Yes)
+            if (MessageBox.Show("Voulez vous Quitter?", "Fermer Application", MessageBoxButtons.YesNo  ) != DialogResult.Yes)
             {
                 e.Cancel = true;
             }
