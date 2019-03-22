@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGuess));
             this.lblQuestion = new System.Windows.Forms.Label();
             this.btnNon = new System.Windows.Forms.Button();
             this.btnOui = new System.Windows.Forms.Button();
@@ -49,20 +50,12 @@
             // lblQuestion
             // 
             this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Location = new System.Drawing.Point(144, 208);
-            this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(157, 13);
-            this.lblQuestion.TabIndex = 0;
-            this.lblQuestion.Text = "Les questions seront affichés ici";
-            this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
             this.lblQuestion.Location = new System.Drawing.Point(0, 177);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(435, 40);
+            this.lblQuestion.Size = new System.Drawing.Size(43, 13);
             this.lblQuestion.TabIndex = 0;
             this.lblQuestion.Text = "aaaaaa";
             this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-
             this.lblQuestion.Visible = false;
             this.lblQuestion.Click += new System.EventHandler(this.lblQuestion_Click);
             // 
@@ -193,6 +186,7 @@
             this.Controls.Add(this.lblQuestion);
             this.Controls.Add(this.menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menu;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
