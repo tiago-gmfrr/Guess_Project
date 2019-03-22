@@ -49,12 +49,14 @@
             // lblQuestion
             // 
             this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Location = new System.Drawing.Point(82, 189);
+            this.lblQuestion.Location = new System.Drawing.Point(144, 208);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(43, 13);
+            this.lblQuestion.Size = new System.Drawing.Size(157, 13);
             this.lblQuestion.TabIndex = 0;
-            this.lblQuestion.Text = "aaaaaa";
+            this.lblQuestion.Text = "Les questions seront affichés ici";
+            this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblQuestion.Visible = false;
+            this.lblQuestion.Click += new System.EventHandler(this.lblQuestion_Click);
             // 
             // btnNon
             // 
@@ -182,8 +184,12 @@
             this.Controls.Add(this.btnNon);
             this.Controls.Add(this.lblQuestion);
             this.Controls.Add(this.menu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menu;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmGuess";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guess";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmGuess_FormClosing);
             this.Load += new System.EventHandler(this.frmGuess_Load);

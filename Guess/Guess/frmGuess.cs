@@ -1,5 +1,38 @@
-﻿using System;
+﻿/*
+ * Guess_Project
+ 
+ * ******************************************************************************************************************************
+ *          Auteur      :       o BRNLLN    Valentin                                                                            *
+ *                              o DSSRR     Jimmy                                                                               *
+ *                              o GM        Tiago                                                                               *
+ *                              o RS        Douglas                                                                             *
+ ********************************************************************************************************************************
+ *          Date        :       Janvier 2019 - Mars 2019                                                                        *
+ ********************************************************************************************************************************
+ *          Classe      :       I.FDA - P2C                                                                                     *
+ ********************************************************************************************************************************          
+ *          Projet      :       Guess                                                                                           *
+ ********************************************************************************************************************************
+ *          Version     :       2019.03.22                                                                                      *
+ ********************************************************************************************************************************
+ *          Description :       o Ce logiciel est un jeu dont le but est de faire deviner à l'ordinateur                        *
+ *                                le personnage que l'utilisateur à choisi.                                                     *
+ *                              o Le jeu possède une base de donnée composée d'une liste d'une dizaine de                       *
+ *                                noms.                                                                                         *
+ *                              o Ce jeu utilise un système de points. Chaque question répondue rapporte un point               *
+ *                                aux personnages correspondant à la réponse obtenue.                                           *
+ *                              o Le jeu a pour but d'être intuitif pour l'utilisateur; l'utilisateur n'a que à                 *
+ *                                appuyer sur les boutons affichés.                                                             *
+ *                              o Une partie est composée de 6 questions communes à tout les personnages. Puis des              *
+ *                                questions spécifiques sont affichés lorsque plusieurs personnages sont possibles.             *
+ *                              o A la fin d'une partie, le personnage déterminé par l'ordinateur sera affiché sous             *
+ *                                forme d'une phrase et d'une image.                                                            *
+ ********************************************************************************************************************************
+ */
+
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -15,6 +48,9 @@ namespace Guess
         public Random question = new Random();
         //Création d'une liste des clés du dictionnaire des questions car dictionnaire ne contient pas d'index
         public List<string> questionList = new List<string>();
+
+        //PictureBox utilisé pour l'affichage du résultat
+        PictureBox resultatPbx = new PictureBox();
 
         //random pour les questions et les réponses, needed en global plutôt que local dans les méthodes
         public string questionActuelle;
@@ -331,14 +367,15 @@ namespace Guess
             
             string personnageGagnant = string.Empty;
 
-
+            //Resortir les personnage ayant le plus de points
             foreach (KeyValuePair<string, int> personnage in PointsPersonnages)
             {
                 if (personnage.Value == Convert.ToInt32(PointsPersonnages.Values.Max()))
                 {
+                    //Obtient le nom du personnage
                     if (personnageGagnant == string.Empty)
                     {
-
+                        
                     }
                     personnageGagnant = personnage.Key;
                 }
@@ -365,11 +402,10 @@ namespace Guess
             }
             else
             {
-                //Affichage des personnages
+                //Affichage des personnages 
                 phraseAffichee = "Vous avez terminé les questions."
-                    + Environment.NewLine
                     + "Il s'agit de "
-                    + KiCéKiGanieuh();
+                    + KiCéKiGanieuh() + " (cliquez sur le nom pour voir sa tête)";
 
                 //Modification des boutons en fin de partie
                 buttonVisibilite();
@@ -387,6 +423,10 @@ namespace Guess
              */
         }
 
+        private void AffichageResultat()
+        {
+            
+        }
         private void btnLancerPartie_Click(object sender, EventArgs e)
         {
             // Lancer la partie
@@ -445,6 +485,11 @@ namespace Guess
         }
 
         private void frmGuess_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblQuestion_Click(object sender, EventArgs e)
         {
 
         }
