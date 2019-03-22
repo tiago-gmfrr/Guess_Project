@@ -55,6 +55,14 @@
             this.lblQuestion.TabIndex = 0;
             this.lblQuestion.Text = "Les questions seront affichés ici";
             this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+
+            this.lblQuestion.Location = new System.Drawing.Point(0, 177);
+            this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Size = new System.Drawing.Size(435, 40);
+            this.lblQuestion.TabIndex = 0;
+            this.lblQuestion.Text = "aaaaaa";
+            this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+
             this.lblQuestion.Visible = false;
             this.lblQuestion.Click += new System.EventHandler(this.lblQuestion_Click);
             // 
@@ -94,7 +102,7 @@
             this.btnQuitter.Location = new System.Drawing.Point(38, 270);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(171, 100);
-            this.btnQuitter.TabIndex = 4;
+            this.btnQuitter.TabIndex = 2;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
@@ -104,7 +112,7 @@
             this.btnLancerPartie.Location = new System.Drawing.Point(243, 270);
             this.btnLancerPartie.Name = "btnLancerPartie";
             this.btnLancerPartie.Size = new System.Drawing.Size(171, 100);
-            this.btnLancerPartie.TabIndex = 5;
+            this.btnLancerPartie.TabIndex = 1;
             this.btnLancerPartie.Text = "Lancer une partie";
             this.btnLancerPartie.UseVisualStyleBackColor = true;
             this.btnLancerPartie.Click += new System.EventHandler(this.btnLancerPartie_Click);

@@ -42,4 +42,10 @@ C:\Users\DUSSERREJ_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.frmLis
 C:\Users\GAMAT_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.frmListePerso.resources
 C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.abxAPropos.resources
 C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.frmListePerso.resources
+<<<<<<< HEAD
 C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.csprojResolveAssemblyReference.cache
+=======
+C:\Users\DUSSERREJ_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.abxAPropos.resources
+C:\Users\DUSSERREJ_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.frmAPropos.resources
+>>>>>>> 95a8fff9b831e13f96dfff0b22deee39b9183a65
+C:\Users\ROSED_INFO\Desktop\Guess_Project\Guess\Guess\obj\Debug\Guess.frmAPropos.resources

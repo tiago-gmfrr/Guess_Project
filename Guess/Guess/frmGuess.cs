@@ -59,7 +59,8 @@ namespace Guess
         //num de la question
         int countRound = 0;
 
-
+        //en jeu ou sur le menu
+        bool enJeu = false;
 
         //Point de chaque perrsonnage (sert a döfinir quand un perrsonnage ä "gaganer")
         int PointKaaris = 0;
@@ -353,16 +354,16 @@ namespace Guess
         {
             IDictionary<string, int> PointsPersonnages = new Dictionary<string, int>()
             {
-            {"Kaaris", PointKaaris},
-            {"SnoopDogg", PointSnoopDogg},
-            {"ClaudeFrancois", PointClaudeFrançois},
-            {"EmmaWatson", PointEmmaWatson},
-            {"PassePartout", PointPassePartout},
-            {"DesinBrognart", PointDenisBrogniart},
-            {"MaitreGims", PointMaitreGims},
-            {"EmiliaClark", PointEmiliaClark},
-            {"MadsMikkelsen", PointMadsMikkelsen},
-            {"ScarletteJohanson", PointScarlettJohansson}
+            {"kaaris", PointKaaris},
+            {"Snoop Dogg", PointSnoopDogg},
+            {"Claude Francois", PointClaudeFrançois},
+            {"Emma Watson", PointEmmaWatson},
+            {"Passe-Partout", PointPassePartout},
+            {"DenisBrognart", PointDenisBrogniart},
+            {"Maitre Gims", PointMaitreGims},
+            {"Emilia Clark", PointEmiliaClark},
+            {"Mads Mikkelsen", PointMadsMikkelsen},
+            {"Scarlett Johansson", PointScarlettJohansson}
             };
             
             string personnageGagnant = string.Empty;
@@ -411,6 +412,8 @@ namespace Guess
                 buttonVisibilite();
                 btnLancerPartie.Text = "Recommencer";
 
+                enJeu = false;
+
                 //Assure la visibilité du label
                 lblQuestion.Visible = true;
             }
@@ -430,6 +433,7 @@ namespace Guess
         private void btnLancerPartie_Click(object sender, EventArgs e)
         {
             // Lancer la partie
+            enJeu = true;
             NewGame();
             NextQuestion();
         }
@@ -447,8 +451,12 @@ namespace Guess
 
         private void mtsMenuPrincipal_Click(object sender, EventArgs e)
         {
-            buttonVisibilite();
-            //NewGame();
+            if (enJeu)
+            {
+                buttonVisibilite();
+                enJeu = false;
+            }
+            
         }
 
         private void mtsQuitter_Click(object sender, EventArgs e)
@@ -461,7 +469,7 @@ namespace Guess
         /// </summary>
         private void frmGuess_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Voulez vous Quitter?", "Fermer Application", MessageBoxButtons.YesNo) != DialogResult.Yes)
+            if (MessageBox.Show("Voulez vous Quitter?", "Fermer Application", MessageBoxButtons.YesNo  ) != DialogResult.Yes)
             {
                 e.Cancel = true;
             }
@@ -474,7 +482,7 @@ namespace Guess
 
         private void àproposdeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            abxAPropos aPropos = new abxAPropos();
+            frmAPropos aPropos = new frmAPropos();
             aPropos.ShowDialog();
         }
 
